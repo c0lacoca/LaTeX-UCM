@@ -1,0 +1,269 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc} %%esto es para las tildes en linux
+\usepackage{lipsum}
+\usepackage{mathptmx}
+\usepackage[paper=a4paper, margin=2.5 cm, top=2.5 cm, bottom=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{ mathrsfs }
+\usepackage{tikz-cd}
+\usepackage{relsize}
+\usepackage{amsfonts}
+\usepackage{cancel}
+\usepackage[T1]{fontenc}
+\usepackage{scrextend}
+\usepackage{tcolorbox}
+\usepackage{wrapfig}
+\usepackage[new]{old-arrows}
+\usepackage{makeidx}
+\usepackage{comment}
+\usepackage{units}
+\usepackage[new]{old-arrows}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{lmodern}
+\usepackage{graphicx} % provides "\rotatebox" and "\reflectbox" macros
+\usepackage{mathtools}
+\usepackage[document]{ragged2e}
+\usepackage{ulem}
+\usepackage{pgfplots}
+\usepackage{etoolbox}
+\usepackage[shortlabels]{enumitem}
+\usepackage{MnSymbol} %\upmapsto \downmapsto
+\usepackage{hyperref}
+\usepackage{multicol}
+\usetikzlibrary{decorations.pathmorphing}
+\setlist[enumerate]{nosep}
+\makeatletter
+\providecommand{\subtitle}[1]{% para poner un \subtitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+
+\makeatother
+\newlength{\LETTERheight}
+\AtBeginDocument{\settoheight{\LETTERheight}{I}}
+\newcommand*{\longleadsto}[1]{\ \raisebox{0.24\LETTERheight}{\tikz \draw [->,
+line join=round,
+decorate, decoration={
+    zigzag,
+    segment length=4,
+    amplitude=.9,
+    post=lineto,
+    post length=2pt
+}] (0,0) -- (#1,0);}\ }
+
+\newcommand\rotPi{\rotatebox[origin=c]{180}{$\Pi$}}
+\newcommand\copi{\reflectbox{\rotPi}}
+\newcommand\longmapsfrom{\rotatebox[origin=c]{180}{$\longmapsto$}}
+\newcommand\cqd{$\hfill \blacksquare$.}
+\newcommand\CQD{$\mathbb{Q}$.$\mathbb{E}$.$\mathbb{D}$.}
+\newcommand\mc[1]{\mathcal{#1}}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries \thepage}
+\fancyhead[RE,LO]{}
+
+
+\titleformat{\chapter}[display]
+  {\bfseries\Large}
+  {\vspace{-30mm}\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+  {1ex}
+  {\titlerule\vspace{1ex}\filleft}
+  [\vspace{1ex}\titlerule]
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+\titleformat{\section}[hang]{\bfseries\large}{\thesection.}{4pt}{}
+\titlespacing*{\section}{0pt}{20pt}{10pt}
+\titleformat{\subsection}[hang]{\bfseries\normalsize}{\thesubsection.}{6pt}{}
+\titleformat{\subsubsection}[hang]{\itshape\normalsize}{\thesubsubsection.}{6pt}{}
+\linespread{1.5}
+\parskip=10pt
+
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    urlcolor=red,
+    pdftitle={\today},
+    }
+
+\newtheoremstyle{plain}
+{0pt} % Space above
+{10pt} % Space below
+{} % Body font
+{} % Indent amount
+{\bfseries} % Theorem head font
+{.} % Punctuation after theorem head
+{.5em} % Space after theorem head
+{} % Theorem head spec (can be left empty, meaning `normal')
+
+
+\newtheoremstyle{azul}
+{0pt} % Space above
+{10pt} % Space below
+{} % Body font
+{} % Indent amount
+{\bfseries \color{blue}} % Theorem head font
+{.} % Punctuation after theorem head
+{.5em} % Space after theorem head
+{} % Theorem head spec (can be left empty, meaning `normal')
+
+\newtheoremstyle{azul2}
+{0pt} % Space above
+{10pt} % Space below
+{} % Body font
+{} % Indent amount
+{\itshape \color{blue}} % Theorem head font
+{.} % Punctuation after theorem head
+{.5em} % Space after theorem head
+{} % Theorem head spec (can be left empty, meaning `normal')
+
+
+\theoremstyle{azul}
+  \newtheorem*{propx}{Proposición}
+  \newtheorem*{demx}{Demostración}
+  \newtheorem*{defix}{Definición}
+  \newtheorem*{propix}{Propiedades}
+  \newtheorem*{corx}{Corolario}
+  \newtheorem*{ejex}{Ejemplos}
+  \newtheorem*{teox}{Teorema}
+  
+\theoremstyle{azul2}
+  \newtheorem*{obsx}{Observación}
+
+\theoremstyle{plain}
+  \newtheorem{pro}{Proposición}
+  \newtheorem*{prop}{Proposición}
+  \newtheorem{prop1}{Proposición}
+  \newtheorem*{lem}{Lema}
+  \newtheorem*{teoGM}{Teorema de Gram–Schmidt}
+  \newtheorem*{orto}{Algoritmo de ortonormalización}
+  
+\theoremstyle{definition}
+  \newtheorem*{eje}{Ejemplo}
+  \newtheorem*{ejes}{Ejemplos}
+  \newtheorem*{clasi}{Clasificación}
+  \newtheorem{defin}{Definición}
+  \newtheorem*{defi}{Definición}
+  \newtheorem*{propi}{Propiedades}
+  \newtheorem*{teo}{Teorema}
+  \newtheorem*{teoRefl}{Teorema de reflexividad}
+  \newtheorem*{cor}{Corolario}
+  \newtheorem*{coro}{Corolario}  
+  \newtheorem*{ejers}{Ejercicios}
+  \newtheorem*{ejer}{Ejercicio}
+  \newtheorem*{ejern}{Ejercicio}
+
+
+\theoremstyle{remark}
+  \newtheorem*{obs}{Observación}
+  \newtheorem*{sol}{Solución}
+  \newtheorem*{pag}{Página}
+  \newtheorem*{dem}{Demostración}
+  \newtheorem*{nota}{Nota}
+  
+% Font
+\newcommand{\bb}[1]{\mathbb{#1}}
+% Math
+\newcommand{\id}[1][]{\textrm{\textup{Id}}_{#1}} %identidad
+\newcommand{\im}[1]{\textrm{\textup{Im}}\,#1} %imagen sin (_)
+\newcommand{\iim}[1]{\textrm{\textup{Im}}\left(#1\right)}%imagen con (_)
+\newcommand{\prdesc}[2]{\langle {#1},{#2} \rangle} %prod. escalar
+\newcommand{\Prdesc}[2]{\left\langle {#1},{#2} \right\rangle} %prod. escalar parentesis adaptivos
+\newcommand{\grd}[1]{\textrm{\textup{grado} }#1} %grado
+\newcommand{\Part}[1]{\textrm{\textup{Part}}\left(#1\right)} %partes conjuntos
+\newcommand{\ext}[1]{\textrm{\textup{ext}}\left(#1\right)} %exterior
+\newcommand{\vol}[1]{\textrm{\textup{vol}}\left(#1\right)} %volumen
+\newcommand{\cte}{\textsc{c}\textrm{te}} %constante
+\DeclareMathOperator{\coker}{coker}
+% Entorno construido
+\newcommand{\cont}[1]{%
+            $\longrightarrow$ Contraejemplo:\\ \textit{\phantom{.}\qquad\begin{minipage}[t]{0.9\linewidth}#1\end{minipage}}} %contraejemplo
+\newcommand{\dboxed}[1]{\dbox{\ensuremath{#1}}}
+% Trigonometria hiperbolica
+\newcommand{\arsinh}{\textrm{arsinh}}
+\newcommand{\arcosh}{\textrm{arcosh}}
+\newcommand{\artanh}{\textrm{artanh}}
+\newcommand{\arcsch}{\textrm{arcsch}}
+\newcommand{\arsech}{\textrm{arsech}}
+\newcommand{\arcoth}{\textrm{arcoth}}
+%Geometría
+\newcommand{\Line}{\overleftrightarrow} %recta
+\newcommand{\Segment}{\overline} %segmento
+\newcommand{\rRay}{\overrightarrow} %vector/semirecta
+\newcommand{\lRay}{\overleftarrow} %semirecta
+\newcommand{\Arc}{\overgroup} %arco
+\newcommand{\Circle}{\mathord{\odot}} %circulo
+\newcommand{\Pot}[2]{\textrm{Pot}_{#1}\left({#2}\right)} %potencia de un pto
+    % Down arrow and Up arrow elongate
+    \newcommand{\xdownarrow}[1]{%
+      {\left\downarrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+    }
+    \newcommand{\xuparrow}[1]{%
+      {\left\uparrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+    }
+
+
+ \newcommand\bigpi{\mathlarger{\pi}}
+ \newcommand\mbig[2]{\mathlarger{#2}}
+ \newcommand{\Lim}[3]{\underset{#1\to #2}{\lim}\;#3}
+ \newcommand*{\pd}[3][]{\ensuremath{\frac{\partial^{#1} #2}{\partial #3}}}
+%%para poner \frac{\partial^z x}{\partial y} como \pd[z]{x}{y}
+  
+\title{\textit{\textbf{Ecuaciones diferenciales}} \\ Curso 2022-2023}
+\subtitle{2$^{\circ}$ Matemáticas, Universidad de Salamanca} 
+\author{Sara S.G.}
+\date {\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\justifying
+\input{Teoría}
+\input{Recetario}
+\input{RecetarioSistemas}
+%\input{Seminarios}
+%\input{Tarea}
+\end{document}
+\begin{tikzpicture}[bullet/.style={
+	        fill=black,
+	        circle,
+	        minimum width=2pt,
+	        inner sep=1pt
+	        }]
+	        
+        \node[bullet] at (-0.9942,-0.2801) {};
+        \node[bullet] at (0.9849,0.2659) {};
+        \node[bullet] at (0.2502,1.0182) {};
+        \node[bullet] at (0,0) {};
+        \node[bullet] at (-0.7498,0.7182) {};
+        \node[bullet] at (-0.2532,-1.0083) {};
+        \node[bullet] at (-0.527,1.7289) {};
+        \node[bullet] at (-1.5498,1.4182) {};
+
+        \draw (0.2502,1.0182)--node[above] {$t$}(0.7502,1.0182);
+        
+        \draw  (-0.9942,-0.2801) circle (0.5);
+        \draw  (0.9849,0.2659) circle (0.5);
+        \draw  (0.2502,1.0182) circle (0.5);
+        \draw  (0,0) circle (0.5);
+        \draw  (-0.7498,0.7182) circle (0.5);
+        \draw  (-0.2532,-1.0083) circle (0.5);
+        \draw  (-0.527,1.7289) circle (0.5);
+        \draw  (-1.5498,1.4182) circle (0.5);
+        \draw  plot[smooth cycle, tension=.7] coordinates {(-1.1262,-1.1259)  (-2.2008,1.3903) (-0.6299,2.3496) (0.8461,1.374) (1.5512,0.1344) (0.0964,-1.4516)} ;
+        \draw  plot[smooth cycle, tension=.7] coordinates {(-1.0587,3.2192) (-3.8241,1.6445) (-2.8339,-1.2593) (-1.0913,-3.2947) (2.2766,-1.0312) (1.7273,2.1225)};
+        \node at (-0.7498,-1.9818) {$\mathcal{C}=\operatorname{Im}\psi_c$};
+        \node at (1.7502,3.0182) {$\mathbb{F}^n_q$};
+        \node at (2,-3) { con $t=\left\lfloor\frac{d-1}{2}\right\rfloor$};
+        \end{tikzpicture}
+< >

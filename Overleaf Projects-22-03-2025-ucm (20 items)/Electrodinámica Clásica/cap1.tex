@@ -1,0 +1,393 @@
+\chapter[Relatividad especial]{Teoría especial de la relatividad}
+\section[Relatividad. Transf. de Lorentz.]{Relatividad especial y transformaciones de Lorentz}
+\subsection{Postulados de la relatividad especial}
+\begin{define}
+    Un \emph{sistema de referencia} (SR) es un sistema de coordenadas para medir la posición espacial de una partícula y un reloj.
+\end{define}
+
+\begin{define}
+    Se conoce como sistema de referencia \emph{inercial} (SRI) a aquel en el que se cumple la primera ley de Newton, es decir, los cuerpos libres (sobre los cuales no actúan ninguna fuerza) se mueven con velocidad constante.
+\end{define}
+\begin{postula}[Principio de relatividad:]
+   Todas las leyes de la física, en ausencia de fuerzas gravitatorias, tienen la misma forma en sistemas de referencia inerciales, salvo la gravedad .
+\end{postula}
+\textbf{Comentarios:}
+\begin{itemize}
+    \item Es un hecho experimental que las partículas libres se mueven, de forma relativa, con velocidad constante, cuya validez se mantiene hasta en los regímenes relativistas. Un sistema inercial (aquel en el que se observa este comportamiento) también se mueve con respecto a otro con velocidad constante. 
+
+    \item El principio de la relatividad es la generalización del principio de Galileo, en el cual se establecía que las leyes de la mecánica son iguales en todos los SRI. No obstante, Galileo asumía la propagación de información como instantánea ($c\to \infty$). Esto, en relatividad, no es cierto, siendo el límite de velocidad de propagación de información la velocidad de la luz ($c$ finita). 
+\end{itemize}
+
+\begin{postula}
+    La velocidad de la luz en el vacío es constante e independiente del movimiento relativo de la fuente o emisor.
+\end{postula}
+
+En mecánica newtioniana, se establece que el espacio es relativo, esto es, si dos sucesos no son simultáneos, la distancia entre ellos depende del sistema de referencia. Para verlo, partamos de un sistema $S$ y de dos sucesos $\vec{x}_1$ y $\vec{x}_2$ ocurriendo en dos momentos distintos $t_1$ y $t_2$, respectivamente. Con respecto a este sistema consideramos un SRI, $S'$, en movimiento con velocidad $\vec{v}$.
+\begin{align*} 
+    t &= t' \tag{1.1} \label{1.1}\\
+    \vec{x}'(t) &= \vec{x}(t)-\vec{v}t  
+\end{align*}
+La distancia entre ambos sucesos será entonces 
+\begin{equation*}
+    \begin{split}
+        |\vec{x}_2'(t_2) - \vec{x}_1'(t_1)|^2 &= |\vec{x}_2(t_2) - \vec{x}_1(t_1)|^2 + v^2(t_2-t_1)^2 - 2(t_2-t_1)[\vec{x}_2(t_2) - \vec{x}_1(t_1)]
+    \end{split}
+\end{equation*}
+Pero si los sucesos sí son simultáneos ($t_2=t_1$), los dos últimos términos se cancelan, y se obtiene que las distancias sí son las mismas. \\
+
+En mecánica newtoniana, el tiempo es absoluto (\ref{1.1}), es decir, pasa de la misma forma en el sistema $S$ como en $S'$. Esto nos permite deducir la ley de adición de velocidades, con la que ya estamos familiarizados. 
+$$
+\vec{v}' = \vec{v} - \vec{V}
+$$
+Esto es incompatible con la relatividad especial, en donde el carácter finito de la velocidad de la luz y determinados invariantes nos conducirán naturalmente a nuevas transformaciones de simetría, que llamaremos \textbf{transformaciones de Lorentz}.
+
+\subsection{Transformaciones de Lorentz}
+Supongamos que, en $t_1$, emitimos una señal luminosa en $\vec{x}_1(t_1)$, que se recibe en el instante $t_2$ en $\vec{x}_2(t_2)$. En el sistema $S$, se cumple entonces que 
+$$
+-c^2(t_2-t_1)^2 + |\vec{x}_2-\vec{x}_1|^2 = 0 \ .
+$$
+En otro sistema inercial $S'$ se observa el mismo suceso, y se cumple de la misma manera que
+$$
+-c^2(t_2'-t_1') + |\vec{x}_2' - \vec{x}_1'|^2 = 0 \ ,
+$$
+ya que $c$ es independiente del movimiento relativo. Nos interesa saber ahora qué tipo de transformaciones satisfacen esta invariancia. Las transformaciones más sencillas y que preservan el origen de referencia son las \emph{lineales} en la velocidad. Por simplicidad, suponemos el movimiento en dirección del eje $x$. 
+\begin{align*}
+    t' &= \gamma (v)[f(v)x+t] \\
+    x' &= a(v)(x-vt) 
+\end{align*}
+Si sustituimos estas expresiones en las ecuaciones anteriores, llegamos a que
+$$
+f(v) = -\frac{v}{c^2} \quad , \quad \gamma = \frac{1}{\sqrt{1-\beta^2}} \quad , \quad a(v)=\gamma \quad , \quad \beta = \frac{v}{c} \ .
+$$
+Nuestras transformaciones de Lorentz son, finalmente, 
+\refstepcounter{equation}
+\begin{align} 
+    t' &= \gamma  ( t - (v/c^2)x   )\\
+    x' &= \gamma (x - vt) \\
+    y' &= y \qquad z' = z \ .
+\end{align}
+En general, para una velocidad $\vec{v}$ cualquiera, 
+\begin{align}
+    t' &= \gamma (t - \vec{v}\cdot \vec{x} / c^2)\\
+    \vec{x}' &= \vec{x} + (\gamma -1) (\hat{v}\cdot \vec{x})\hat{v} - \gamma \vec{v} t
+\end{align}
+Si las ecuaciones vectoriales son válidas en una base, se cumplen en todas las bases, por lo que son la generalización de las ecuaciones unidimensionales (que salen de rotar el sistema). En términos de componentes:
+\begin{align}  
+    t'     &= \gamma \left ( t - \sum_i v_i x^i /c^2 \right ) \label{ej11} \\ 
+    (x')^i &= x^i + (\gamma-1) \sum_j v_j x^j v^i /v^2 - \gamma v^i t \label{ej12}
+\end{align}
+\begin{mybox}EJERCICIOS:
+    \begin{enumerate}
+        \item Demostrar las ecuaciones (\ref{ej11}) y (\ref{ej12}).
+        \item ¿Conmutan las operaciones de Lorentz? (\emph{Sol: No, se diferencian en una rotación.})
+        \item Demostrar que las transformaciones de Lorentz pueden escribirse en términos de rotaciones hiperbólicas.
+    \end{enumerate}
+\end{mybox}
+\newpage
+\subsection{Adición de velocidades}
+Sea $\vec{V}$ la velocidad de una partícula en $S$, $\vec{V}'$ la velocidad en $S'$ y $\vec{v}$ la velocidad de $S'$ con respecto a $S$. 
+\begin{equation} \label{sumarel}
+    \vec{V}' = \dv{\vec{x}'}{t'} = \dv{\vec{x}'}{t}\cdot \dv{t}{t'} =  \dv{\vec{x}'}{t}\left / \dv{t'}{t}\right . = \frac{\vec{v} + (\gamma -1)\left ( \hat{v}\cdot \vec{V} \right )\hat{v} - \gamma \vec{v}}{\gamma \left (1 - \vec{v}\cdot \vec{V}/c^2\right )} \ : \ \text{\small Ley de adición de velocidades.} 
+\end{equation}
+Podemos separar en componentes paralelas y perpendiculares: $\vec{V} = V_\parallel \hat{v} + \vec{V}_\perp $,
+$$
+V_\parallel ' = \frac{V_\parallel - v}{1-vV_\parallel /c^2} \qquad , \qquad \vec{V}_\perp ' = \frac{\vec{V}_\perp }{\gamma \left ( 1-vV_\parallel /c^2 \right )}
+$$
+A partir de (\ref{sumarel}), definiremos la \emph{suma relativista} como:
+$$
+\vec{v}_1 \breve{+}\, \vec{v}_2 := \frac{\vec{v}_2 + (\gamma_1 -1)(\hat{v}_1\cdot \vec{v}_2)\hat{v}_1 + \gamma _1\vec{v}_1}{\gamma_1 (1+\vec{v}_1\cdot \vec{v}_2/c^2)}
+$$
+Cabe decir que la suma relativista no es conmutativa.
+\subsection{Elemento de línea}
+Tenemos dos sucesos $x_1(t_1)$ y $x_2(t_2)$. El intervalo espaciotemporal es:
+$$
+S^2 = -c^2(t_2-t_1)^2 + (\vec{x}_2-\vec{x}_1)^2
+$$
+Casi siempre trabajaremos con sucesos infinitesimales, por lo que compararemos sucesos en $t$ y $t+\D{t}$. Para ello, introducimos el \emph{elemento de línea}.
+\begin{equation} \label{ellin}
+    \D{S}^2 = -c^2 \D{t}^2 + \D{\vec{x}}^2
+\end{equation}
+Esto nos permite clasificar los sucesos en tres clases o géneros:
+\begin{itemize}
+    \item Género tiempo: $S^2 < 0$. Existe un SRI en el cual ambos sucesos ocurren en el mismo lugar pero en diferentes momentos del tiempo, esto es, están separados temporalmente. 
+
+    \item Género espacio: $S^2 > 0$. Existe un SRI en el cual ambos sucesos ocurren instantáneamente pero en diferentes lugares en el espacio, esto es, están separados espacialmente.
+
+    \item Género luz o nulo: $S^2 = 0$. Ambos sucesos están conectados por una señal luminosa.
+\end{itemize}
+
+\begin{define}
+    En cada instante de tiempo, llamaremos \emph{sistema de referencia propio} a un sistema que acompaña a la partícula. Será inercial si la partícula es libre. SR rotados con respecto a éste son equivalentes entre ellos.
+\end{define}
+
+\begin{define}
+    Los SRI \emph{comóviles} son sistemas que en cada instante tienen la misma velocidad que el sistema propio.
+\end{define}
+
+\begin{define}
+    El \emph{tiempo propio} $\tau$ de una partícula es el tiempo medido en el sistema de referencia propio. 
+    \begin{equation}
+        \D{\tau} = \D{t'} = \D{t}/\gamma  \quad \text{\small (Dilatación temporal).}
+    \end{equation}
+\end{define}
+Análogamente, las longitudes propias son siempre mayores, 
+$$
+\D{l}' = \D{l_0} = \D{l} \cdot \gamma
+$$
+
+\section{Espaciotiempo de Minkowski}
+Partiremos del SRI $S$ que quedará definido por la base ortonormal $\{ \hat{e}_i \}_{i=1,2,3}$ y un reloj que medirá el tiempo $t$. Llamaremos $x^i$ a las coordenadas espaciales del vector $\vec{x}$, es decir, $\vec{x}=\sum_i x^i \hat{e}_i = x^i \hat{e}_i$. Junto con el tiempo, podremos definir las componentes de un \emph{cuadrivector} $\B{x}$, que serán $x^\mu = (ct, x^i ) = (ct,\vec{x})\ , \ \mu=0,1,2,3$; $\B{x} = x^\mu \B{\hat{e}}_\mu $. En este paso hemos introducido una base ortonormal $\{ \B{\hat{e}}_\mu \}$ de $\K{R}^4$ llamada \emph{base lorentziana}. \\
+
+En estas coordenadas, podremos escribir el elemento de línea (\ref{ellin}) como
+\begin{equation}\label{ds}
+    \D{S}^2 = - (\D{x}^0)^2 + \sum_{i=1}^3 (\D{x}^i)^2 = \eta_{\mu \nu} \D{x^\mu ,x^\nu }\ ,
+\end{equation}
+con 
+$$
+\eta_{\mu \nu } = \left ( \begin{array}{cccc}
+    -1 &&&  \\
+     &1&&\\
+     &&1&\\
+     &&&1
+\end{array} \right )=\diag(-1,1,1,1) \ .
+$$
+Ademas, la inversa de esta matriz será $\eta^{\mu \nu } = \diag(-1,1,1,1)$. Por otro lado, como el elemento de línea es independiente de las coordenadas:
+$$
+\D{S}^2 = \eta_{\mu \nu } \D{(x')^\mu , (x')^\nu }
+$$
+\begin{define}
+    Llamaremos \emph{tensor métrico lorentziano} al tensor doblemente covariante y simétrico que, en la base lorentziana $\{ \B{\hat{e}}_\mu  \}$, tiene como componentes:
+    \begin{equation}
+        \bm{\eta}(\B{\hat{e}}_\mu,\B{\hat{e}}_\nu ) = \eta_{\mu \nu} \ .
+    \end{equation}
+\end{define}
+
+Nos preguntamos ahora qué otras transformaciones mantienen el elemento de línea invariante. De forma trivial, vemos que tanto reflexiones espaciales y temporales ($\vec{x}\to -\vec{x}\ , \ t\to -t$) lo cumplen. Las otras transformaciones posibles son las rotaciones y las traslaciones espaciales. En conjunto, todas ellas forman un grupo denominado \emph{grupo de Poincaré}. \\
+
+Si representamos la transformación de forma matricial:
+$$
+x'^\mu = \Lambda ^\mu {}_\nu x^\nu \ ,
+$$
+¿qué condiciones tiene que cumplir $\Lambda ^\mu {}_\nu $? Sustituyendo en (\ref{ds}), obtenemos 
+\begin{equation}
+    \boxed{\eta_{\mu \nu } = \Lambda ^\alpha {}_\mu \Lambda ^\beta {}_\nu \eta_{\alpha \beta }} \label{1.14}
+\end{equation}
+\begin{mybox}
+    EJERCICIO: 
+    \begin{itemize}
+        \item Demostrar (\ref{1.14}) (\emph{Ejercicio previo:} hacer lo mismo primero con $\D{S}^2=\delta_{ij}\D{x^i,x^j}$).
+    \end{itemize}
+\end{mybox}
+\subsection{Conceptos de álgebra tensorial}
+\begin{itemize}
+    \item \textbf{Vector contravariante:} Conjunto de elementos, cada elemento con cuatro componentes, tal que cada par de elementos se relaciona como 
+    $$
+    \B{w} = \{ w^\mu  \} : \quad w'^\mu = \Lambda ^\mu {}_\nu w^\nu  \ .
+    $$
+    Estos elementos se transforman de forma \emph{inversa} a como se transforma la base. 
+
+    \item \textbf{Vectores covariantes:} Conjunto de elementos de cuatro componentes tal que cada par de elementos se transforman como 
+    $$
+    \B{w} = \{ w_\mu  \} : \quad w'_\mu = \tilde{\Lambda} _\mu {}^\nu w_\nu  \ .\quad \footnote{$w'_\mu = \eta_{\mu \nu } w'^\nu = \eta_{\mu \nu } \Lambda^\nu {}_\rho w^\rho = \eta_{\mu \nu }\Lambda ^\nu {}_\rho \eta^{\rho \sigma }w_\sigma \equiv \Tilde{\Lambda }_\mu {}^\sigma w_\sigma  $}
+    $$
+    Estos elementos se transforman de la misma forma que la base. 
+
+    \item \textbf{Tensores:} Un \emph{tensor}\footnote{Aquí viene...} -- en términos de sus componentes \emph{contravariantes}, en este caso -- se entiende como aquel conjunto de elementos que se transforma en cada índice como se transforman los vectores correspondientes.
+    $$
+    T'^{\mu \nu \cdots } = \Lambda^\mu {}_\alpha \Lambda ^\nu {}_\beta \cdots T^{\alpha \beta \cdots }
+    $$
+    Se llama \emph{orden tensorial} al número de índices distintos que posee el tensor, tanto covariantes como contravariantes. 
+    \newpage
+    Operaciones con tensores:
+    \begin{itemize}
+        \item Suma: Se realiza entre tensores del mismo orden tensorial.
+        \item Multiplicación por constante: independiente del orden.
+        \item Parte simétrica: Dado un tensor $T^{\mu \nu}{}_{\rho \sigma \alpha  }$, su \emph{parte simétrica} o \emph{simetrización} es:
+        $$
+        T^{\mu \nu}{}_{(\rho \sigma \alpha )} = \frac{1}{s!} \sum_\pi T^{\mu \nu } \underbrace{\pi(\rho ) \pi (\sigma ) \pi (\alpha )}_{\text{Permutaciones}}\ ,
+        $$
+        donde $s$ es el número índices simetrizados. \\
+        
+        Ejemplo: $T^{(\mu \nu)} = 1/2 (T^{\mu \nu } + T^{\nu \mu })$.
+
+        \item Parte antisimétrica: 
+        $$
+        T^{\mu \nu }{}_{[\rho \sigma \alpha ]} = \frac{1}{s!} \sum_\pi (-1)^\pi T^{\mu \nu } \pi(\rho ) \pi (\sigma ) \pi (\alpha )\ .
+        $$
+        Ejemplo: $T^{[\mu \nu ]} = 1/2 (T^{\mu \nu } - T^{\nu \mu })$.\\
+
+        Un tensor es \emph{simétrico} si es igual a su parte simétrica (idem para antisimétricos).
+
+        \item Contracción de dos índices:
+        $$
+        T^{\mu \textcolor{red}{\nu} \rho \sigma }{}_{\alpha \beta \textcolor{red}{\gamma} } \longrightarrow T^{\mu \textcolor{blue}{\nu} \rho \sigma }{}_{\alpha \beta \textcolor{blue}{\nu} } = R^{\mu \rho \sigma }{}_{\alpha \beta }
+        $$
+    \end{itemize}
+    Un tensor importante será el tensor métrico. Para que realmente sea un tensor, tiene que cumplir que 
+    \begin{equation} \label{1.15}
+    \eta_{\mu \nu } = \tilde{\Lambda }_\mu {}^\alpha \Tilde{\Lambda}_\nu {}^\beta \eta _{\alpha \beta }\ .
+    \end{equation}
+    \begin{mybox}
+        EJERCICIO: Demostrar que se cumple (\ref{1.15}) usando (\ref{1.14}).
+    \end{mybox}
+    Como hemos visto anteriormente, el tensor métrico se puede utilizar para subir y/o bajar índices,
+    $$
+    w_\mu = \eta_{\mu \nu }w^\nu \ .
+    $$
+    Además, permite introducir un producto escalar definido no positivo, 
+    \begin{equation*}
+        \begin{split}
+            \B{u}\cdot \B{w} &= \eta_{\mu \nu }u^\mu w^\nu = u_\mu w^\mu \ ,\\
+            ||w|| &= + \sqrt{|u_\mu w^\mu |}\ .
+        \end{split}
+    \end{equation*}
+\end{itemize}
+\subsection{Pseudo-tensor de Levi-Civita}
+\begin{define}
+    El \emph{pseudo-tensor de Levi-Civita} se define como 
+    $$
+    \epsilon_{\mu \nu \rho \sigma} = \begin{cases}
+        \phantom{-}0 &\text{si hay índices repetidos,}\\
+        \phantom{-}1 &\text{si }(\mu \nu \rho \sigma) \text{ es permutación par de }(0123) , \\
+        -1 &\text{si }(\mu \nu \rho \sigma) \text{ es permutación impar de }(0123).
+    \end{cases}
+    $$
+    Por ejemplo: $\epsilon_{0123} = 1\ , \ \epsilon_{0132} = -1\ , \ \epsilon_{1123} = 0$.
+\end{define}\\
+Este objeto es invariante bajo transformaciones de Lorentz ortócronas\footnote{Transformación que preserva la orientación temporal, ver \url{https://core.ac.uk/download/pdf/323345195.pdf}, pág. 15.} propias, y no bajo reflexiones espaciales ni temporales. Esto hace que esta cantidad no sea exactamente tensorial -- aunque con una pequeña modificación del símbolo puede hacer que se transforme como un tensor --. \\
+
+La matriz $\epsilon^{\mu \nu \rho \sigma}$ se obtiene subiendo índices con el tensor métrico, $\eta_{\mu \nu}$, y, además, puede comprobarse que $\epsilon^{0123} = -1 = -\epsilon_{0123}$ .
+\begin{mybox}
+    EJERCICIOS: Demostrar que se cumplen las siguientes identidades:
+    \begin{align}
+        \epsilon^{\mu \nu \rho \sigma}\epsilon_{\mu \nu \rho \sigma} &= -4!\\
+        \epsilon^{\mu \nu \rho \sigma}\epsilon_{\alpha \nu \rho \sigma} &= -3! 1! \delta^\mu _\alpha \\
+        \epsilon^{\mu \nu \rho \sigma}\epsilon_{\alpha \beta \rho \sigma} &= -2! 2! \delta ^\mu_{[ \alpha } \delta^\nu _{\beta ]} =-2!2!\cdot  1/2(\delta^\mu _\alpha \delta^\nu _\beta - \delta^\mu_\beta \delta ^\nu _\alpha )\\
+        \epsilon^{\mu \nu \rho \sigma}\epsilon_{\alpha \beta \gamma \sigma} &= -1! 3! \delta^\mu _{[\alpha }\delta ^\nu _{\beta} \delta^\rho _{\gamma]}
+    \end{align}
+\end{mybox}
+En general, veremos que el pseudo-tensor de Levi-Civita es muy útil para representar determinantes y productos vectoriales.\footnote{\emph{<<Esto suena a $\epsilon$ que te cagas. >>}}\\
+
+Otro operador importante que necesitaremos será el siguiente:\\
+
+\begin{define}
+    Dado un tensor antisimétrico en todos sus índices, definiremos su \emph{dual de Hodge} como la contracción en todos sus índices con el pseudo-tensor de Levi-Civita en sus primeros índices.
+    \begin{align*}
+        ^* U &:= \frac{1}{4!} U_{\mu \nu \rho \sigma } \epsilon^{\mu \nu \rho \sigma}\ ,  & ^*T^\sigma &:= \frac{1}{3!}T_{\mu \nu \rho }\epsilon^{\mu \nu \rho \sigma} \ ,\\
+        ^*S^{\rho \sigma} &:= \frac{1}{2!} S_{\mu \nu }\epsilon^{\mu \nu \rho \sigma}\ , & ^*R^{\nu \rho \sigma } &:= R_{\mu \nu \rho}\epsilon^{\mu \nu \rho \sigma}\ .
+    \end{align*}
+\end{define}
+\begin{mybox}
+    EJERCICIO: Dado un tensor completamente antisimétrico $\B{T}$, demostrar que 
+    $$
+    ^{**}\B{T} = \B{T} \cdot (-1)^{1+k(4-k)} \quad ; \quad k\equiv \text{\#\ de índices de }\B{T} \ .
+    $$
+\end{mybox}
+\subsection{Análisis: derivación}
+\subsubsection{Gradiente:}
+Dada una función $f$, su gradiente se define como
+$$
+\partial_\mu f := \pdv{f}{x^\mu } \quad , \quad \partial^\mu f:= \pdv{f}{x_\mu } \ .
+$$
+\subsubsection{Operador de D'Alembert:}
+El \emph{operador de D' Alembert} es el laplaciano cuadridimensional,
+$$
+\square := \partial_\mu \partial ^\mu = -\frac{1}{c^2}\partial_t^2 + \partial_i ^2 \ .
+$$
+El laplaciano tridimensional se puede abreviar como $\partial_i^2 = \partial_i \partial ^i = \laplacian = \triangle$ .
+\subsection{Hipersuperficies espaciales}
+Decimos que una hipersuperficie es de género \emph{espacio} si y sólo si su vector normal, $\pi_\mu $, es de género \emph{tiempo}. Es decir,
+$$
+f(x^\mu) = 0 \implies  \pi_\mu = \pm \frac{\partial_\mu f}{||\partial_\mu f||}: \pi_\mu \pi^\mu = -1 \ .
+$$
+Esta condición es equivalente a imponer que nuestra hipersuperficie sea una sección de $t\equiv $ constante. Por otro lado, como $\B{\pi}$ es un vector, el género de la hipersuperficie se preserva bajo transformaciones de Lorentz.
+\subsection{Análisis: integración}
+\subsubsection{Integración a lo largo de una curva:}
+Dada una curva parametrizada mediante un parámetro $\lambda$, $x^\mu (\lambda)$, tomaremos como elemento de línea la cantidad $\D{x^\mu} = \partial_\lambda x^\mu \D{\lambda}$, que es además el vector tangente infinitesimal en nuestro espaciotiempo de Minkowski. 
+\subsubsection{Integración a lo largo de una superficie bidimensional}
+En el caso de superficies, nuestro cuadrivector vendrá parametrizado como $x^\mu (\lambda^1,\lambda^2)$. Necesitaremos, por otro lado, que esta superficie no sea de género nulo. De esta manera, los vectores infinitesimales tangentes a la superficie son 
+$$
+\D{{v}}_1^\mu = \partial_{\lambda^1}x^\mu \D{\lambda^1} \qquad \qquad \D{{v}}_2^\mu = \partial_{\lambda^2}x^\mu \D{\lambda^2} \ .
+$$
+El elemento de área será entonces el módulo del paralelogramo determinado por estos vectores, 
+$$
+\D[2]{S} = ||\D{\B{v}_1}||\ ||\D{\B{v}_2}|| \sin \alpha_{12} \ .
+$$
+Si elevamos al cuadrado y manipulamos la expresión, podemos llegar al siguiente resultado:
+\begin{equation*}
+    \begin{split}
+        (\D[2]{S})^2 &= ||\D{\B{v}_1}||^2 ||\D{\B{v}_2}||^2 \left (1-\cos^2 \alpha _{12}\right ) \\
+                     &= (\D{\B{v}_1})^2 (\D{\B{v}_2})^2 - (\D{\B{v}_1}\cdot \D{\B{v}_2})^2 \\
+                     &= 2\ \var ^\alpha _{[\rho} \var^\beta _{\sigma ]} \D{v_1^\rho ,v_2^\sigma , v_{1\alpha }, v_{2\beta }} \\
+                     &= \frac{1}{2} \epsilon^{\mu \nu \alpha \beta  } \epsilon_{\mu \nu \rho \sigma } \D{v_1^\rho ,v_2^\sigma , v_{1\alpha }, v_{2\beta }} \\
+    (\D[2]{S})^2  :\!&= \frac{1}{2} \D{S_{\mu \nu },S^{\mu \nu }}  
+    \end{split}
+\end{equation*}
+En el último paso hemos definido el \emph{elemento de área}, $\D{S_{\mu \nu }} := \epsilon_{\mu \nu \rho \sigma }\D{v_1^\rho ,v_2^\sigma}$, de manera que se parezca a la definición a la que estamos acostumbrados en tres dimensiones. De hecho, si tomamos como cero el primer índice, recuperamos el producto vectorial tridimensional, 
+$$
+\D{S_{0i}} = \epsilon_{ijk} \D{v_1^j,v_2^k} \ .
+$$
+\subsubsection{Integración en hipersuperficies}
+Para superficies parametrizadas en tres o más variables, tomaremos como elemento de volumen:
+$$
+\D[3]{\sigma } = \sqrt{\left | \D{\sigma_\mu , \sigma ^\mu } \right |} \qquad ; \qquad \D{\sigma}_\mu = \epsilon_{\mu \nu \rho \sigma } \D{v_1^\nu , v_2^\rho , v_3^\sigma } \ .
+$$
+Una vez tenemos estos elementos diferenciales, podemos generalizar los teoremas del cálculo integral que conocemos.
+\begin{theorem}
+    [Teorema de la divergencia de Gauss] Dada la región $M$ cuadridimensional, su frontera $\partial M$ tridimensional y un campo $\B{T}$ dado por sus componentes $\{ T^\mu \}  $, entonces se cumple que
+    $$
+    \boxed{\int_M \D[4]{\B{x}} \ \partial_\mu T^\mu = \int_{\partial M}\D{\sigma_\mu } \ T^\mu} \ .
+    $$
+\end{theorem}
+\begin{theorem}
+    Dada la hipersuperficie tridimensional $\Sigma $, $\partial \Sigma $ su frontera bidimensional y un campo $T^{\mu \nu }$, entonces se cumple que
+    $$
+    \boxed{\int_\Sigma \D{\sigma_\mu } \ \partial_\mu T^{\mu \nu } = \frac{1}{2} \int_{\partial \Sigma } \D{S_{\mu \nu} } \ T^{\mu \nu }} \ .
+    $$
+\end{theorem}
+\begin{theorem}
+    [Teorema de Stokes] Dada la superficie (bidimensional) $S$, su frontera $\partial S$ y un campo $T^\mu $, entonces se cumple que
+    $$
+    \boxed{\frac{1}{2} \int _S \D{S_{\mu \nu }} \ \epsilon^{\mu \nu \rho \sigma } \partial_\rho T_\sigma = \int_{\partial S} \D{x^\mu } \ T_\mu} \ . 
+    $$
+\end{theorem}
+Como lo hemos hecho anteriormente con los elementos de línea, se comprueba que, cuando $t\equiv $ const., obtenemos los teoremas en tres dimensiones.
+\subsection{Cinemática}
+Para parametrizar el movimiento, utilizaremos el tiempo propio, $\tau$. De esta manera, tenemos nuestro vector de posición, $x^\mu (\tau)$, y nuestra velocidad, 
+$$
+u^\mu := \dv{x^\mu }{\tau } = \dot{x}^\mu \ .
+$$
+Una característica importante de esta velocidad es que, en módulo, 
+$$
+u_\mu u^\mu = \dv{x_\mu }{\tau} \dv{x^\mu }{\tau } = \dv{S^2}{\tau^2 } = -c^2 \equiv \text{constante.}
+$$
+Esto hace que la cuadrivelocidad siempre sea de género tiempo. Por otro lado, la aceleración $b^\mu = \dot{u}^\mu $ cumplirá que siempre será perpendicular a la velocidad, esto es, $b_\mu u^\mu = 0$. Esto implica que la aceleración siempre será de género espacio (solo aceleramos en el espacio, lo cual tiene sentido). \\
+
+Se puede demostrar (de hecho es un ejercicio) que las componentes de la aceleración son las siguientes:
+\begin{align*}
+    b^0 &= \gamma^4 \vec{v}\cdot \vec{a}/c  &  \vec{b} &= \gamma^4 (\vec{v}\cdot \vec{a})\vec{v}/c^2 + \gamma^2 \vec{a}
+\end{align*}
+(para hacerlo, usamos que $\dv*{\gamma}{t} = (\dv*{\gamma }{\tau}) (\dv*{\tau}{t}) = \gamma^3 \vec{v}\cdot \vec{a}/c$, que también hay que demostrarlo como ejercicio). \\
+
+En componentes perpendicular y paralela, las aceleraciones espaciales (o triaceleraciones) se transforman como:
+\begin{align*}
+    a_\parallel '   &= \frac{a_\parallel}{\gamma^3 (1-vV_\parallel /c^2)} \ ,\\
+    \vec{a}_\perp ' &= \frac{\vec{a}_\perp }{\gamma^2 (1-vV_\parallel/c^2)^2} + \frac{v a_\parallel \vec{V}_\parallel }{c^2 \gamma^2 (1-vV_\parallel /c^2)^3}\ ;
+\end{align*}
+donde $\vec{v}$ es la velocidad relativa entre los sistemas de referencia. 
+\section{Grupo de Poincaré}
+En este apartado, estudiaremos las transformaciones activas, principalmente. Estas consisten en la actuación de la transformación en el propio objeto observado, a diferencia del cambio de sistema de referencia que realizamos en las transformaciones pasivas. 
+\subsection{Grupo de traslaciones}
+El grupo de traslaciones se compone de todas las transformaciones (activas) que trasladan nuestro origen de coordenadas,
+$$
+\B{x}' = \B{x} + \B{\alpha} \leadsto x'^\mu  = x^\mu + \alpha ^\mu \ .
+$$
+con $\B{\alpha} $ constante. En sentido infinitesimal, tendremos $$\var x^\mu = x'^\mu - x^\mu = \var \alpha ^\mu \ .$$ 
+\subsection{Grupo de Lorentz}
+Ya hemos visto que el grupo de Lorentz contiene a las transformaciones que son ortócronas propias. Podemos representar esta transformación mediante nuestra matriz $\B{\Lambda}$ que cumple que 
+$$
+\eta_{\mu \nu } = \Lambda ^{\alpha  }{}_{\mu }\Lambda^\beta {}_\nu \eta_{\alpha \beta }
+$$
+Estas matrices deben cumplir que $\det(\B{\eta}) = \pm 1$. Además, como son ortócronas, $\Lambda^0{}_0 > 0$. Por otro lado, de las dieciséis componentes que tiene $\B{\Lambda}$, solamente seis de ellas serán libres debido a sus simetrías. \\
+
+

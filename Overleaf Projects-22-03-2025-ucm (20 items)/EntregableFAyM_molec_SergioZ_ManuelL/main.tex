@@ -1,0 +1,135 @@
+\documentclass{article}
+
+\input{preambulo}
+
+\begin{document}
+
+\begin{center}
+   \HUGE\textbf{ \scshape Física Atómica y Molecular}  \\ \huge Entregable de la parte de moléculas \\ \vspace{0.5cm}\today \\
+   \vspace{0.7cm}
+   \large Manuel Lozano Bermúdez, Sergio Zucchi Mesia.\\ \rule{\textwidth}{2pt} 
+\end{center}
+
+\section*{Ejercicio 1}
+\begin{minipage}{0.72\textwidth}
+La tabla adjunta muestra los orígenes de las 3 primeras bandas de la progresión 0-v del sistema $B^2\Pi_g - X^2\Sigma_u{}^+$ del Be$_2{}^+$ con el isótopo estable $^9$Be (A=9,Z=4). Se conoce además que la constante rotacional para el estado electrónico fundamental de esta molécula es $B_r = 0.765$ cm$^{-1}$.
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\centering
+        \begin{tabular}{|c|c|} \hline 
+            Banda & $E_\text{origen} $ (cm$^{-1}$) \\ \hline 
+             0-0&$29350.3$  \\ \hline 
+             0-1&$28833.3$  \\ \hline 
+             0-2&$28325.2$  \\  \hline 
+        \end{tabular}
+        \label{tab:ej1}
+\end{minipage}
+
+
+\begin{enumerate}
+    \item[a)] Discutir la estabilidad de las especies Be$_2$ y Be$_2{}^+$ en sus configuraciones electrónicas fundamentales en términos del orden de enlace. Supóngase el orden típico de energías de los orbitales moleculares en moléculas diatómicas homonucleares. 
+
+    \item[b)] Deducir cuál es el primer estado electrónico excitado del Be$_2{}^+$ (no es el estado $B^2 \Pi_g$) indicando los números cuánticos $\Lambda$ y $S$ así como sus simetrías. ¿Es posible una transición E1 entre este primer estado electrónico excitado y el estado electrónico fundamental?
+
+    \item[c)] Obtener la constante armónica y la corrección anarmónica en cm$^{-1}$ para el estado electrónico fundamental del Be$_2{}^+$.
+
+    \item[d)] Obtener la distancia internuclear de equilibrio en ángstrom para el estado electrónico fundamental del Be$_2{}^+$. ¿Qué valores tendrían la distancia de equilibrio y la constante rotacional si uno de los dos núcleos fuera $^{10}$Be? 
+\end{enumerate}
+
+\section*{Ejercicio 2}
+Se conoce que la molécula Be$_3$ es estable y, en su estado fundamental, los 3 átomos de Be forman un triángulo equilátero. Deducir el número de constantes rotacionales necesarias para describir los niveles rotacionales de la molécula y si la molécula presenta espectro rotacional puro en los dos siguientes supuestos:
+\begin{enumerate}
+    \item[a)] Los tres núcleos son $^9$Be.
+
+    \item[b)] Dos núcleos son $^9$Be mientras que el tercero es $^{10}$Be, manteniéndose la geometría de la molécula.
+\end{enumerate}
+.\dotfill 
+
+%% \textbf{Va Manu, nosotros podemos \smiley{}}
+\paragraph{Ej. 1} 
+\begin{enumerate}
+    \item[a)] 
+      %% lo pongo en rojo porq todavía no está corregido
+    Orden de enlace: $OE= (n^\text{ligantes} - n^\text{antiligantes})/2$. Necesitamos conocer el nº de electrones en estados ligantes y en antiligantes. Una vez los tengamos, cuanto mayor sea el orden de enlace, más estable será la molécula. El balance neto impide la formación. \\
+    
+    El orden de llenado para moléculas es el siguiente: 1s$\sigma_g$ 1s$\sigma_u{}^*$ 2s$\sigma_g$ 2s$\sigma_u{}^*$ 2p$\pi_u$ 2p$\sigma_g \ldots$
+    \begin{flalign*}
+         \text{Be}_2{}^+ &\to \uparrow \downarrow \quad \uparrow \downarrow\quad \uparrow \downarrow \quad \uparrow \ \  \implies OE = 1/2&&\\
+        \text{Be}_2\phantom{{}^+}     &\to \uparrow \downarrow \quad \uparrow \downarrow\quad \uparrow \downarrow \quad \uparrow \downarrow \implies OE = 0&&
+    \end{flalign*}
+    Observamos que el Be$_2$ forma parejas completas de electrones ligantes y antiligantes, de manera que {\bfseries no puede formar estados ligados}. Por otro lado, el Be$_2{}^+$ tiene un solo electrón en el estado antiligante en 2s$\sigma_u{}^*$, de manera que {\bfseries sí se forma la molécula}.
+    
+
+    \item[b)] 
+    
+    El estado excitado podría ser el electrón en el siguiente estado de menor energía. En ese caso, sería el estado 2p$\pi_u$, con el número cuántico $\Lambda = 1$ y $S = 1/2$. Por ello, el estado, denotado como $^{2S+1}\Lambda$, es $^2\Pi$. Además, como nos dicen que el estado excitado no tiene paridad gerade, el estado final será $^2\Pi_u$.\\
+
+    Las transiciones E1 de estados electrónicos imponen una regla de selección sobre la paridad haciendo que ésta deba cambiar. Tanto el estado excitado como el fundamental $^2\Sigma_u{}^+$ tienen simetría ungerade, de manera que esta transición E1 \textbf{no es posible}. 
+    
+
+    \item[c)]
+    
+    Los niveles de energía para una molécula son:
+    $$
+    E_{n,\nu ,N} = \Cl{V}_n(R_0) + \underbrace{\hbar\omega_0(\nu + 1/2)}_{\text{aprox. armónica}} + \underbrace{B_rN(N+1)}_{\text{{rotor rígido}}} - \underbrace{\hbar\omega_0 \beta (\nu + 1/2)^2}_{\text{anarmonicidad}}- a(\nu + 1/2)N(N+1) - bN^2(N+1)^2
+    $$
+    Considerando únicamente las energías vibracionales:
+    $$
+    E_{n,\nu} = E_n{}^\text{el} + \hbar \omega_0(\nu + 1/2) - \hbar \omega_0 \beta (\nu + 1/2)
+    $$
+    
+
+    Usando los datos de la tabla
+    \begin{equation*}
+        \begin{cases}
+            E[0-0]-E[0-1]=517.0\,\text{cm}^{-1}=\hbar\omega_0-2\left[-\hbar\omega_0\beta\right]\\
+            E[0-0]-E[0-2]=1025.1\,\text{cm}^{-1}=\hbar\omega_0-6\left[-\hbar\omega_0\beta\right]\\
+            E[0-1]-E[0-2]=508.1\,\text{cm}^{-1}=\hbar\omega_0-4\left[-\hbar\omega_0\beta\right]
+        \end{cases}    
+    \end{equation*}
+    De esta forma la constante anarmónica ($-\hbar\omega_0\beta$) y la constante armónica ($\hbar\omega_0$) son:
+    \[
+    \boxed{-\hbar\omega_0\beta=8.9\,\text{cm}^{-1}}\qquad;\qquad\boxed{\hbar\omega_0=534.8\,\text{cm}^{-1}}
+    \]
+
+    \item[d)] {
+    Conociendo que la constante rotacional en el estado fundamental es $B_r=0.765$ cm$^{-1}$ y que esta viene dada por 
+    \[B_r=\frac{\hbar^2}{2\mu R_0^2}\Rightarrow R_0=\frac{\hbar^2}{\sqrt{2B_r\mu}}\]
+    donde $\mu=(N_n m_n) (N_p m_p)/\left[(N_p m_p)+(N_n m_n)\right]$ es la masa reducida del núcleo y $R_0$ es la distancia internuclear de equilibrio.
+
+    Por simplicidad de los cálculos, se han usado unidades atómicas con $m_e=\hbar=e=1$ y $m_n=m_p=m=1822\,m_e$. 
+    %% fun fact: masa e-/masa p+ es aprox 6·pi^5.
+    
+    Si consideramos que los dos núcleos de $^{9}\text{Be}$ entonces $\mu=\frac{9}{2}m\approx8199$, usando la fórmula de la distancia internuclear
+    \[
+    \boxed{R_0\left[^{9}\text{Be}\right]=\frac{1}{\sqrt{2B_r\mu}}=0.89284\,\text{\AA}}
+    \]
+
+    Por otro lado, si uno de los núcleos fuese $^{10}\text{Be}$ entonces $\mu=\frac{90}{19}m\approx8631$. Cambiando la masa reducida, la constante rotacional cambia como 
+    \[
+    \frac{B_r\left[^{9}\text{Be}\right]}{B_r\left[^{10}\text{Be}\right]}=\frac{\mu\left[^{10}\text{Be}\right]}{\mu\left[^{9}\text{Be}\right]}\Rightarrow \boxed{B_r\left[^{10}\text{Be}\right]=0.72671\,\text{cm}^{-1}}
+    \]
+    Usando esta constante rotacional, el radio internuclear de equilibrio será
+    \[
+    \boxed{R_0\left[^{9}\text{Be}\right]=0.89287\,\text{\AA}}
+    \]
+    Cabe notar que si uno de los núcleo tuviese un neutrón más, la distancia de equilibrio y la constante rotacional no cambian de forma considerable.
+    }
+\end{enumerate}
+
+\paragraph{Ej. 2}
+
+Teniendo una molécula con 3 átomos con una geometría de triángulo equilátero entonces el número de grados de libertad (modos normales o constantes rotacionales) que se necesitan para describirla son
+\[
+    \underbrace{3}_{\text{nº átomos}}\cdot\underbrace{3}_{\text{g.l. núcleo}}-\underbrace{3}_{\text{traslación}}-\underbrace{3}_{\text{rotacional}}=3\,\text{grados de libertad}
+\]
+\begin{enumerate}
+    \item[a)] {
+    Teniendo 3 átomos de Be iguales, se puede considerar que la molécula es un \textbf{tropo esférico} por lo que se puede describir la molécula usando solo \textbf{1 constante rotacional}. Al tener 3 átomo iguales, la molécula no va a tener momento dipolar y por eso no tiene espectro rotacional puro.
+    }
+
+    \item[b)] {
+    Siendo uno de los átomos diferentes, se puede considerar que la molécula es un \textbf{trompo simétrico}, se describe con \textbf{2 constantes rotacionales} y puede tener un espectro rotacional puro.
+    }
+\end{enumerate}
+\end{document}

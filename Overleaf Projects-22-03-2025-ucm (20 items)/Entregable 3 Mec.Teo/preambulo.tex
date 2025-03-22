@@ -1,0 +1,83 @@
+\usepackage[T1]{fontenc}
+
+
+\renewcommand\familydefault{\rmdefault}  %% fuente 
+\usepackage[a4paper, left=2.5cm, right= 2.5cm, top=2.5cm, bottom= 2.5cm]{geometry} %cambiar los márgenes
+\usepackage{ amssymb, cancel, extarrows, amsmath, amsthm }%símbolos matemáticos
+\usepackage{wasysym}  %la carita triste
+\usepackage{derivative}
+\usepackage{physics}
+
+\newcommand{\D}[2][1]{\odif[order={#1}]{#2}} %% Notación de diferenciales con paquete derivative
+\newcommand{\B}[1]{\mathbf{#1}}  %% Para hacer negrita sin escribir mathbf
+\newcommand{\K}[2][]{\mathbb{#2}^{#1}} %%Letras chulas de espacios vectoriales y cuerpos
+\newcommand{\Cl}[1]{\mathcal{#1}}  %%Letras caligráficas
+\newcommand{\cte}{\text{const.}}
+
+\usepackage{graphicx, wrapfig}% Include figure files
+\usepackage{subfig}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage[spanish, es-tabla]{babel} %traducción al español
+\addto{\captionspanish}{%
+  \renewcommand*{\chaptername}{CAPÍTULO}
+  \renewcommand*{\pagename}{PÁGINA}}
+\usepackage{units}
+\usepackage{fancyhdr, ragged2e}
+\usepackage{anyfontsize}
+\setlength{\headheight}{13.07002pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[11pt]{moresize}
+\usepackage{lipsum}
+\usepackage{changepage}
+\usepackage{calc}
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{xcolor, colortbl}
+\usepackage{pdfpages} %%insertar pdf dentro del documento
+\usepackage{pagecolor}
+\usepackage{tcolorbox}
+\newtcolorbox{mybox}{colback=gray!5!white,colframe=black!75!black}
+\definecolor{cadetblue4}{rgb}{.33,.53,.55}
+\definecolor{azulcrepuscular}{rgb}{.49,.62,.75}
+\definecolor {atomictangerine} {rgb} {1.0, 0.6, 0.4}
+\definecolor{portada}{RGB}{2, 2, 0}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Mec. Teo: Entregable 3},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\rmfamily\huge\bfseries}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}[{\titlerule[2pt]}]
+\titleformat*{\section}{\Large\normalfont\rmfamily\bfseries}
+\titleformat*{\subsection}{\large\normalfont\rmfamily\bfseries}
+\titleformat*{\subsubsection}{\normalsize\normalfont\rmfamily\bfseries} 
+
+\usepackage{notomath}   %% fuente para entornos matemáticos
+
+\setlength{\parindent}{0cm}  %% para quitar la sangría francesa esa repulsiva
+
+\newcounter{define}[section] %%contador para definiciones
+
+\newenvironment{define}[1][]{\refstepcounter{define}\underline{\textbf{Definición \thedefine}} [#1]: \ \begin{minipage}[t]{\textwidth-\widthof{\underline{\textbf{Definición \thedefine}}["\emph{#1}"]:}}}{\end{minipage}\\\\}  %%definicion de entorno de definicion
+
+\newcounter{postula}[section] %%contador para postulados
+
+\newenvironment{postula}[1][]{\begin{mybox} \refstepcounter{postula}\underline{\textbf{Postulado \thepostula}} [#1]: \ \begin{minipage}[t]{\textwidth-\widthof{\underline{\textbf{Postulado \thepostula}}["\emph{#1}"]:}}}{\end{minipage}\end{mybox}}  %%definicion de entorno de postulado
+
+% Algún paquete más de Sergio :P
+% \usepackage{amsmath}
+%% ==>te lo he movido a la línea 6 ;) -Manu

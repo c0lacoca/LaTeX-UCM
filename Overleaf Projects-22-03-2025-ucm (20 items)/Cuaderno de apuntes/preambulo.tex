@@ -1,0 +1,69 @@
+\usepackage[T1]{fontenc}
+\renewcommand\familydefault{\sfdefault}
+
+%%%%%%%% MATES %%%%%%%%%%%%%%%%%%%%%5
+
+\usepackage[a4paper, left=2.5cm, right= 2.5cm, top=2.5cm, bottom= 2.5cm]{geometry} %cambiar los márgenes
+\usepackage{ amssymb, cancel, extarrows, amsmath, amsthm }%símbolos matemáticos
+\usepackage{wasysym}  %la carita feliz y triste
+\usepackage{derivative}
+\usepackage{physics}
+\usepackage{bm}% bold math
+\usepackage{units}
+
+\newcommand{\D}[2][1]{\odif[order={#1}]{#2}} %% Notación de diferenciales con paquete derivative
+\newcommand{\B}[1]{\mathbf{#1}}  %% Para hacer negrita sin escribir mathbf
+\newcommand{\K}[2][]{\mathbb{#2}^{#1}} %%Letras chulas de espacios vectoriales y cuerpos
+\newcommand{\Cl}[1]{\mathcal{#1}}  %%Letras caligráficas
+
+%%%%%%%%%%%%% FLOATS, BABEL Y ESTILO DE PAGINA %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx, wrapfig}% Include figure files
+\usepackage{subfig}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage[spanish, es-tabla]{babel} %traducción al español
+\addto{\captionspanish}{%
+  \renewcommand*{\chaptername}{CAPÍTULO}
+  \renewcommand*{\pagename}{PÁGINA}}
+\usepackage{fancyhdr, ragged2e}
+\usepackage{anyfontsize}
+\setlength{\headheight}{13.07002pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{float}
+\usepackage{booktabs}
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{xcolor, colortbl}
+\usepackage{pdfpages} %%insertar pdf dentro del documento
+\usepackage{pagecolor}
+\usepackage{coffeestains}
+\usepackage{tcolorbox}
+\newtcolorbox{mybox}{colback=gray!5!white,colframe=black!75!black}
+\definecolor{cadetblue4}{rgb}{.33,.53,.55}
+\definecolor{azulcrepuscular}{rgb}{.49,.62,.75}
+\definecolor {atomictangerine} {rgb} {1.0, 0.6, 0.4}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}   %%Títulos customizados
+\titleformat{\chapter}[display]
+  {\normalfont\rmfamily\huge\bfseries}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}[{\titlerule[2pt]}]  %%Títulos a familia \rmfamily . Generar linea gruesa en los capítulos
+\titleformat*{\section}{\Large\normalfont\rmfamily\bfseries}
+\titleformat*{\subsection}{\large\normalfont\rmfamily\bfseries}
+\titleformat*{\subsubsection}{\normalsize\normalfont\rmfamily\bfseries} 
+
+
+\usepackage{notomath} %lo pongo aquí porque si no entra en conflicto con otros paquetes. Para usar \sfdefault
+
+\setlength{\parindent}{0cm}  %% para quitar la sangría francesa esa repulsiva

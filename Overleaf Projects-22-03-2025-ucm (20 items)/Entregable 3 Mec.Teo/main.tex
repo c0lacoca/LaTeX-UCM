@@ -1,0 +1,116 @@
+\documentclass{article}
+
+\input{preambulo}
+\usepackage{enumitem}
+
+\begin{document}
+
+\begin{center}
+   \HUGE\textbf{ \scshape Mecánica Teórica}  \\ \huge Entregable del tema 3. Péndulo de Foucault \\ \vspace{0.5cm}\today \\
+   \vspace{0.7cm}
+   \large Manuel Lozano Bermúdez, María Palfy Alonso-Alegre, \\ Sergio Zucchi Mesia,  Alberto Mateo Martín.\\ \rule{\textwidth}{2pt} 
+\end{center}
+
+\begin{mybox}
+    Habitualmente consideramos la Tierra como un sistema inercial, sin embargo hay experimentos en los que queda patente que la Tierra rota, siendo por tanto no inercial. Un ejemplo de ello se observa con el péndulo de Foucault. Con este término nos referimos a un oscilador armónico de frecuencia natural $\omega_0$ (se considera el régimen de oscilaciones pequeñas del péndulo para poder considerarlo armónico), cuyo plano de oscilación rota debido a la rotación de la Tierra. Llamemos $\Omega$ a la frecuencia de rotación de dicho plano ($\Omega=\Omega_T \cdot \sin\alpha$, donde $\Omega_T$ es la frecuencia angular de la Tierra y $\alpha$ la latitud del punto de anclaje del péndulo), que es distinta de cero fuera del Ecuador, y aumenta al acercarnos a los polos. Típicamente tenemos que $\Omega \ll \omega_0$ (el período de rotación de la Tierra es mucho más largo que el del péndulo), así que el efecto es pequeño pero como siempre actúa en el mismo sentido, se acumula. En coordenadas polares $(r,\theta)$ en un sistema inercial, el Lagrangiano de un péndulo de Foucault de masa $m$ es 
+    $$
+    L = \frac{m}{2} (\dot{r}^2 + r^2 \dot{\theta}^2) - \frac{m}{2} \omega_0^2 r^2. 
+    $$
+    No obstante, para medir el efecto de rotación de la Tierra tenemos que irnos al sistema no inercial del péndulo. Llamando $\vartheta$ al ángulo rotante que caracteriza la posición del plano de oscilación del péndulo, tenemos $\vartheta=\theta+\Omega t$, y el Lagrangiano en las coordenadas rotantes ($r,\vartheta$) toma la forma 
+    $$
+    L = \frac{m}{2} (\dot{r}^2 + r^2 \dot{\vartheta}^2) - m \, \Omega \, r^2 \dot{\vartheta} - \frac{m}{2} \omega^2 r^2, \quad \omega^2 = \omega_0^2 - \Omega^2. $$
+\end{mybox}
+
+\begin{mybox}
+    \begin{enumerate}
+        \item Encontrar el hamiltoniano del sistema como función de ($r,\vartheta,p_r,p_\vartheta$), siendo $p_r$ y $p_\vartheta$ los momentos conjugados a $r$ y $\vartheta$, y notar que tanto la energía $E$ como el momento $p_\vartheta$ son constantes del movimiento.
+    \end{enumerate}
+\end{mybox}
+\emph{\bfseries Solución:} \\
+
+Dado nuestro lagrangiano $L(q,p)$, los momentos conjugados a $(r,\vartheta)$ serán
+%   Dado nuestro lagrangiano en función de las coordenadas rotantes $(r,\vartheta)$ del sistema de referencia no inercial que es la Tierra con su rotación, los momentos conjugados a $(r,\vartheta)$ serán
+\begin{align*}
+    p_r &= \pdv{L}{\dot{r}} = m\dot{r} \implies \dot{r}(p_r) = \frac{p_r}{m}\\
+    p_\vartheta &= \pdv{L}{\dot{\vartheta}} = mr^2(\dot{\vartheta} - \Omega ) \implies \dot{\vartheta}(p_\vartheta) = \Omega + \frac{p_\vartheta}{mr^2}
+\end{align*}
+%El hamiltoniano se construye como $H(q,p,t) = p_\alpha \dot{q}^\alpha (p_\alpha) - L(q,p,t)$. Usando las relaciones obtenidas previamente, el %hamiltoniano es
+%$$
+%H(q,p) = \frac{p_r^2}{2m} + \frac{p_\vartheta^2}{2mr^2} + \frac{m}{2} (\Omega^2 + \omega ^2 )r^2
+%$$
+%y observamos que $\partial_t H = 0$. Por tanto, $H=E \equiv \cte$ Además, como la variable $\vartheta$ es cíclica, $p_\vartheta \equiv \cte$ %también. 
+
+Dado que se cumple la condición hessiana, $\det(\frac{\partial^2 L}{\partial\dot{q}^a\partial\dot{q}^b})=\frac{m^2r^2}{4}\neq0$, el hamiltoniano se construye como $H(q,p,t) = p_\alpha \dot{q}^\alpha (p_\alpha) - L(q,p,t)$:
+
+\begin{align*}
+H(r,\vartheta,\dot{r}, \dot{\vartheta}) &=p_r\dot{r}(p_r)+p_\vartheta\dot{\vartheta}(p_\vartheta)-L(r,\vartheta,\dot{r}, \dot{\vartheta})= \\
+    &=p_r\frac{p_r}{m}  +   p_\vartheta\Omega   -   \frac{m}{2} (\dot{r}^2 + r^2 \dot{\vartheta}^2) + m \, \Omega \, r^2 \dot{\vartheta} + \frac{m}{2} \omega^2 r^2 =   \\
+    &=\dfrac{p_r^2}{m}+p_\vartheta\Omega+\frac{p_\vartheta^2}{mr^2}-\dfrac{m\dot{r}^2}{2}-\dfrac{mr^2\dot{\vartheta}^2}{2}+m \, \Omega \, r^2 \dot{\vartheta} + \frac{m}{2} \omega^2 r^2 =   \\
+    &=  \dfrac{p_r^2}{2m}+p_\vartheta\Omega+mr^2(\dot{\vartheta}-\Omega)^2-mr^2\left(\dfrac{\dot{\vartheta}^2}{2}-\dot{\vartheta}\Omega\right)+\frac{m}{2} \omega^2 r^2=\\
+    &=  \dfrac{p_r^2}{2m}+p_\vartheta\Omega+mr^2\left [ \dot{\vartheta}^2+\Omega^2+2\dot{\vartheta}\Omega-\left(\dfrac{\dot{\vartheta}^2}{2}-\dot{\vartheta}\Omega\right)      \right ]+\frac{m}{2} \omega^2 r^2=\\
+    &=  \dfrac{p_r^2}{2m}+p_\vartheta\Omega+mr^2\left [ \dfrac{\dot{\vartheta}^2}{2}-\dot{\vartheta}\Omega+\Omega^2   -\dfrac{\Omega^2}{2}+\dfrac{\Omega^2}{2}      \right ]+\frac{m}{2} (\omega_0^2-\Omega^2) r^2=\\
+    &=  \dfrac{p_r^2}{2m}+p_\vartheta\Omega+mr^2\dfrac{(\dot{\vartheta}-\Omega)^2}{2}-mr^2\dfrac{\Omega^2}{2}+mr^2\dfrac{\Omega^2}{2}+\frac{m}{2} \omega_0^2 r^2 =\\
+    H&=  \dfrac{p_r^2}{2m}+p_\vartheta\Omega+\dfrac{p_\vartheta^2}{2mr^2}+\frac{m}{2} \omega_0^2 r^2
+\end{align*}
+Puesto que $\partial_t H = 0$, $H$ es una constante del movimiento, es la energía $E$. Además, como la variable $\vartheta$ es cíclica, el momento $p_\vartheta$ es también una constante del movimiento que podemos llamar $j\equiv J_{\vartheta}$. 
+
+
+\begin{mybox}
+    \begin{enumerate}
+    \setcounter{enumi}{1}
+        \item Encontrar expresiones analíticas para las variables de acción $J_\vartheta$ y $J_r$ en términos de las cantidades conservadas $E$ y $p_\vartheta$, así como de los parámetros fijos del sistema ($\Omega,\omega_0$). Ayuda: $\oint \D{r} \sqrt{-ar^2+2b-\frac{c}{r^2}}=\pi\{-\sqrt{c}+|b|/\sqrt{a}\}$, con $a,c>0$.
+    \end{enumerate}
+\end{mybox}
+\emph{\bfseries Solución:} \\
+
+Bajo las condiciones del teorema de Liouville-Arnold (hamiltoniano independiente del tiempo, constantes del movimiento $E,p_\vartheta$ independientes entre sí y en involución y conjuntos de nivel $\Cl{U}_g$ cerrados y acotados), una propuesta para encontrar las expresiones analíticas de las variables de acción es 
+$$  J_\vartheta\equiv\dfrac{1}{2\pi}\oint p_\vartheta \D{\vartheta}= p_\vartheta = j,   \quad   J_r\equiv\dfrac{1}{2\pi}\oint p_r \D{r}$$
+
+Podemos despejar $p_r$ de $H(r,\vartheta,\dot{r}, \dot{\vartheta})=E$:
+\begin{align*}
+   E        &=  \dfrac{p_r^2}{2m}+j\Omega+\dfrac{j^2}{2mr^2}+\frac{m}{2} \omega_0^2 r^2 \\
+   2mr^2E   &=  r^2p_r^2+j^2+2mr^2\Omega j+m^2\omega_0^2r^4 \\
+  \implies  p_r        &=  \dfrac{1}{r}\sqrt{-m^2\omega_0^2r^4 +2mr^2(E-\Omega j)-j^2} = \sqrt{-m^2\omega_0^2r^2 + 2m(E-\Omega j)-\dfrac{j^2}{r^2}}
+\end{align*}
+
+Identificando $a=m^2\omega_0^2, \quad b=m(E-\Omega j), \quad c=j^2   \quad \mathrm{con} \quad a,c>0$ utilizamos la ayuda aportada en el enunciado:
+
+\begin{equation*}
+\begin{split}
+    J_r    = \frac{1}{2\pi} \oint \D{r} \sqrt{-ar^2+2b-\frac{c}{r^2}}=\frac{\pi}{2\pi}\{-\sqrt{c}+|b|/\sqrt{a}\} &= \frac{1}{2}\left \{ -\sqrt{j^2} + \frac{|m(E-j\Omega)|}{\sqrt{m^2\omega_0^2}} \right \}\\
+  \implies J_r  &= -\frac{j}{2} + \frac{|E-j\Omega|}{2\omega_0}
+\end{split}
+\end{equation*}
+Observamos que la cantidad $E-j\Omega $ es positiva a razón de la expresión del hamiltoniano, por lo que podemos expresar $J_r $ directamente como
+$$
+J_r = -\frac{j}{2} + \frac{E-j\Omega}{2\omega_0}
+$$
+\begin{mybox}
+    \begin{enumerate}
+    \setcounter{enumi}{2}
+        \item Encontrar la expresión del hamiltoniano en términos de las anteriores variables de acción.
+    \end{enumerate}
+\end{mybox}
+\emph{\bfseries Solución:} \\
+
+De la ecuación para $J_r$, despejamos directamente para $E = H$.
+$$
+H(J_r,J_\vartheta) = H(J_r,j) = 2\omega_0J_r + (\omega_0 + \Omega)j
+$$
+
+\begin{mybox}
+    \begin{enumerate}
+    \setcounter{enumi}{3}
+        \item Encontrar la frecuencia característica del movimiento en la dirección principal correspondiente a $\vartheta$, es decir $\omega^\vartheta = \partial_{J_\vartheta} H$, y analizar cuánto se diferencia del la frecuencia natural del péndulo $\omega_0$ según el hemisferio y la latitud en la que se encuentre éste.
+    \end{enumerate}
+\end{mybox}
+\emph{\bfseries Solución:} \\
+
+Definimos la diferencia de frecuencia del movimiento característico respecto a la del péndulo como $$\Delta \omega \equiv \omega ^\vartheta - \omega_0  = \partial_j H - \omega_0 =\omega_0 + \Omega -\omega_0 = \Omega = \Omega_T \sin \alpha \ .$$
+Podemos decir entonces que la diferencia de frecuencias es un cociente de la frecuencia de giro de la Tierra que depende de la latitud en la que nos encontremos. Si tomamos $\alpha \in [-\pi/2,\pi/2]$, distinguimos los siguientes casos:
+\begin{itemize}
+    \item Si $\alpha = 0$, el movimiento se presenta en el ecuador de la Tierra. En él, $\Delta \omega = 0$, es decir, no hay diferencia entre la frecuencia de oscilación del péndulo y la característica en la dirección $\vartheta$.
+    \item Si $\alpha = \pm \pi/2$, el movimiento se presenta en los polos, y la diferencia es máxima y mínima respectivamente, correspondiéndole $\Delta \omega = \pm \Omega_T$.
+    \item En general, si $\alpha \in [-\pi/2,0)$, el movimiento se produce en el hemisferio Sur y la frecuencia característica siempre es menor a la del péndulo. Por el contrario, si $\alpha \in (0,\pi/2]$, el movimiento se produce en el hemisferio Norte, y la frecuencia característica es mayor a la del péndulo.  
+\end{itemize}
+\end{document}

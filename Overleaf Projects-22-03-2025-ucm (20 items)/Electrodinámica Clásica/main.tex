@@ -1,0 +1,27 @@
+\documentclass{report}
+\input{preambulo}
+
+\begin{document}
+
+\input{portada}
+
+\restorepagecolor
+
+\normalsize
+
+\pagestyle{fancy}
+\fancyhead[R]{\rmfamily\leftmark}
+\fancyhead[L]{\rmfamily \rightmark}
+\fancyfoot[L]{\rmfamily Manuel Lozano Bermúdez}
+\fancyfoot[R]{\rmfamily EDC}
+{\rmfamily\tableofcontents}
+
+\part{Teoría}
+
+\input{cap1}
+
+\part{Ejercicios}
+
+\input{HOJA_1}
+
+\end{document}
