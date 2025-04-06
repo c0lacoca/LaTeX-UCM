@@ -1,0 +1,203 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand\familydefault{\sfdefault}
+\usepackage[a4paper, left=2.5cm, right= 2.5cm, top=2.5cm, bottom= 2.5cm]{geometry} %cambiar los márgenes
+\usepackage{amsmath, amssymb, cancel, extarrows, amsthm }%símbolos matemáticos
+\usepackage{wasysym}  %la carita triste
+\usepackage{derivative}
+\usepackage{physics}
+\usepackage{graphicx, wrapfig}% Include figure files
+\usepackage{subfig}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage[spanish, es-tabla]{babel} %traducción al español
+\usepackage{units}
+\usepackage{fancyhdr, ragged2e}
+\setlength{\headheight}{13.07002pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{xcolor, colortbl}
+\usepackage{pagecolor}
+\usepackage{tcolorbox}
+\newtcolorbox{mybox}{colback=gray!5!white,colframe=black!75!black}
+\definecolor{cadetblue4}{rgb}{.33,.53,.55}
+\definecolor{azulcrepuscular}{rgb}{.49,.62,.75}
+\definecolor {atomictangerine} {rgb} {1.0, 0.6, 0.4}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\begin{document}
+
+\section*{Enunciado:}
+
+\begin{mybox}
+    En una de las escenas más famosas de la película \emph{Gladiator}, la que recreaba la batalla de Zama, uno de los cartagineses, punto $C$ de la figura, recorría el perímetro de la arena del coliseo -- que asimilaremos aquí a un círculo de radio $R$ --, con una velocidad $\vec{v}_C$ de módulo constante $|\vec{v}_C|=v_0$.\\
+
+    En la misma escena, el gladiador Máximo, -- representado por el punto $M$ de la figura --, intentaba alcanzar al carro para dar muerte a su auriga. En su estrategia, partiendo del centro $O$ de la arena, momento en el que el carro se encontraba en el punto $A$ de la figura, espoleaba a su caballo haciendo que éste se moviera con una velocidad $\vec{v}_M$ cuya magnitud, $|\vec{v}_M|=\lambda v_0$, mantenía constante a lo largo de toda la persecución, y siguiendo una curva $\Gamma $ tal que, \textbf{en todo momento, el centro $O$ del Coliseo, el carro $C$ y el propio gladiador $M$ permanecían alineados.}\\
+
+    Tomando como datos del problema los valores de $R$ y $v_0$, y para un valor genérico de $\lambda $, determine en el triedro $Oxyz$ mostrado:
+    \begin{enumerate}
+        \item Las coordenadas polares $r_M(t)$ y $\theta _M(t)$ que describen la posición $M$ del gladiador en función del tiempo $t$.
+        \item Valor mínimo, $\lambda _\text{mín}$, de $\lambda $ para que el gladiador alcance al carro.
+        \item La ecuación implícita, $y_M=y_M(x_M)$, de la trayectoria del gladiador en coordenadas cartesianas. Identifique dicha trayectoria.
+        \item Para el valor de $\lambda=\sqrt{2}$, y en el instante $t^*$ en el que el gladiador alcanza el carro, encuentre:
+        \begin{enumerate}
+            \item El espacio recorrido por el gladiador $s_M(t^*)$ y por el carro $s_C(t^*)$.
+            \item El área $A_M(t^*)$ descrita por el vector de posición del gladiador $\vec{r}^{\ M}(t)$ en el intervalo $[0,t^*]$.
+            \item Las componentes intrínsecas $\vec{a}_T^M(t^*)$ y $\vec{a}_N^M(t^*)$ de la aceleración del gladiador.
+            \item La velocidad relativa $\vec{v}_{21}^M(t^*)$ y la aceleración relativa $\vec{a}_{21}^M(t^*)$ del gladiador a un triedro de referencia $S_1$ fijo al carro y en el que el eje $X_1$ contiene a los puntos $O$ y $C$.
+        \end{enumerate}
+        \item Las ecuaciones horarias de la trayectoria de $M$ en el triedro móvil $S_1$. Identifique la trayectoria del gladiador en este triedro.
+    \end{enumerate}
+    \noindent\rule{\textwidth}{0.5pt}
+    \textbf{NOTA:} En la resolución del problema puede ser útil recordar que:
+    $$
+    \int \frac{\odif{u}}{\sqrt{B^2-u^2}}=\arcsin{\left (  \frac{u}{B}\right )}
+    $$
+\end{mybox}
+\begin{enumerate}
+    \item En primer lugar, planteemos los datos que tenemos. El objetivo es obtener las coordenadas polares del gladiador $M$, que están relacionadas de alguna manera con las del carro, $C$. Sabemos que el gladiador siempre se mantiene alineado con el carro, que gira en movimiento circular uniforme. Por tanto, los vectores posición de ambos \textbf{deben ser proporcionales}. Esto es:
+    \begin{equation} \label{e1}
+        \vec{r}^{\ M}(t)=k\vec{r}^{\ C}(t)
+    \end{equation}
+    donde $k=k(t)$ es una función del tiempo en general. Sabiendo que el carro parte inicialmente del punto $A(R,0)$ y que se mueve en movimiento circular uniforme, el vector posición del carro en coordenadas cartesianas es:
+    $$
+    \vec{r}^{\ C}(t)=(R\cos(\omega t),R\sin(\omega t)) \qquad \omega \equiv \frac{v_0}{R}
+    $$
+    Derivando la expresión (\ref{e1}) con respecto al tiempo, obtenemos la velocidad del gladiador.
+    $$
+    \vec{v}^M(t)=\dot{\vec{r}}^{\ M}(t)=\dot{k}\vec{r}^{\ C}(t)+k\dot{\vec{r}}^{\ C}(t)=\dot{k}\vec{r}^{\ C}(t)+kR\omega (-\sin(\omega t),\cos(\omega t))
+    $$
+    Calculando el módulo al cuadrado, sabemos que debe ser constante e igual a:
+    $$
+    |\vec{v}^M(t)|^2=\dot{k}^2R^2+k^2R^2\omega ^2\equiv \lambda ^2 v_0^2
+    $$
+    Lo cual nos permite encontrar una ecuación diferencial para $k=k(t)$.
+    \begin{equation}
+        \dot{k}^2+k^2\omega ^2= \lambda ^2 \omega ^2
+    \end{equation}
+    Despejando $\dot{k}$ (sabiendo que $\dot{k}>0$) y separando variables, llegamos a que:
+    $$
+    \int \frac{\odif{k}}{\sqrt{\lambda ^2-k^2}}=\int \omega \odif{t}
+    $$
+    La primitiva de la función de la derecha es trivial, y la de la izquierda es exactamente la ayuda proporcionada; de manera que:
+    $$
+    \arcsin{\left ( \frac{k}{\lambda } \right )}=\omega t + \cancelto{0}{C}
+    $$
+    donde la constante de integración $C$ se anula ya que $k(t=0)=0$. Despejando finalmente para $k=k(t)$:
+    $$
+    \boxed{k(t)=\lambda \sin(\omega t)}
+    $$
+    Una vez conocida la expresión de $k(t)$, podemos hallar las coordenadas polares. En este caso,
+    $$
+    \vec{r}^{\ M}(t)=r_M(t) \hat{e}_r=k(t)R\  \hat{e}_r\implies \boxed{r_M(t)=\lambda R \sin{(\omega t)}}
+    $$
+    La velocidad del gladiador, en coordenadas polares, es:
+    $$
+    \vec{v}^{\ M}(t)=\dot{r}_M \hat{e}_r+r_M \dot{\theta }_M \hat{e}_\theta 
+    $$
+    Tomando el módulo al cuadrado:
+    \begin{equation*}
+        \begin{split}
+            \lambda ^2 v_0^2 = \dot{r}_M^2+r_M^2 \dot{\theta }_M^2 &= \lambda ^2R^2\omega ^2 \cos ^2 (\omega t)+\lambda ^2 R^2 \sin^2 (\omega t) \dot{\theta }_M^2 \\
+            &=\lambda ^2 v_0^2 \cos^2(\omega t)+\lambda ^2 R^2 \sin^2 (\omega t)\dot{\theta }_M^2
+        \end{split}
+    \end{equation*}
+    y despejando para $\dot{\theta }_M^2$:
+    \begin{equation*}
+        \begin{split}
+            \lambda^2 v_0^2[1-\cos^2(\omega t)]=\lambda ^2 v_0^2 \sin^2 (\omega t)&=\lambda ^2 R^2 \sin^2 (\omega t)\dot{\theta }_M^2\\
+            \implies \dot{\theta }_M^2&=\frac{v_0^2}{R^2}=\omega ^2\\
+            \implies \theta_M (t)&=\omega t + \cancelto{0}{\theta _0}
+        \end{split}
+    \end{equation*}
+    $$
+    \boxed{   
+    \begin{cases}
+        r_M(t)=\displaystyle{\lambda R \sin \left ( \frac{v_0}{R} t \right )}\\
+        \theta_M(t)=\displaystyle{\frac{v_0}{R}} t\\
+    \end{cases}
+    }
+    $$
+
+    \item La condición a imponer para que el gladiador alcance al carro es que la coordenada radial del gladiador sea igual al radio de la trayectoria del carro. Es decir:
+    $$
+    r_M(t^*)=R\implies \lambda \cancel{R} \sin(\omega t^*)=\cancel{R}\implies \lambda = \frac{1}{\sin(\omega t^*)}
+    $$
+    Como el seno está acotado, el valor mínimo que puede alcanzar es de $\boxed{\lambda_\text{mín}=1}$, para seno igual a 1.
+
+    \item Conociendo las coordenadas cartesianas $x_M(t),y_M(t)$, podemos obtener la relación $y_M(x_M)$. Partiendo de $x$ e $y$:
+    $$
+    \begin{cases}
+        x(t)=\lambda R \sin(\omega t) \cos(\omega t)\implies x^2(t)=\lambda ^2 R^2 \sin^2(\omega t)\left [1-\sin^2(\omega t) \right ]\\
+        y(t)=\lambda R \sin^2 (\omega t)
+    \end{cases}
+    $$
+    \begin{equation*}
+        \begin{split}
+            \implies &x^2(t)=\lambda R y(t)-y^2(t)\\
+            \implies &\boxed{y^2(t)-\lambda R y(t) +x^2(t)=0}
+        \end{split}
+    \end{equation*}
+    Esta es una ecuación de segundo grado para $y(t)$, y las soluciones dependerán de $x(t)$. Al tratarse de una ecuación de segundo grado, podemos deducir que se trata de una \textbf{circunferencia}. De hecho, si completamos el cuadrado para $y$:
+    \begin{equation*}
+        \begin{split}
+            y^2-\lambda R y +x^2&=y^2-\lambda R y \ \textcolor{red}{+\frac{1}{4}\lambda ^2 R^2-\frac{1}{4}\lambda ^2 R^2}+x^2=0\\
+            &=\boxed{\left ( y-\frac{\lambda R}{2} \right )^2 +x^2=\frac{1}{4}\lambda ^2 R^2}
+        \end{split}
+    \end{equation*}
+    que es la ecuación de una circunferencia centrada en el punto $\displaystyle{\left ( 0,\frac{\lambda R}{2} \right )}$ y de radio $\dfrac{\lambda R}{2}$. La ecuación explícita para esta circunferencia se obtiene resolviendo la ecuación de segundo grado.
+    $$
+    \boxed{y_M(x_M)=\frac{\lambda R}{2}\pm \sqrt{\frac{1}{4}-\left ( \frac{x_M}{\lambda R} \right )^2}}
+    $$
+
+    \item Para $\lambda =\sqrt{2}\ (>1)$, el gladiador interceptará al carro en el tiempo $t^*=(1/\omega )\arcsin(1/\sqrt{2})=\dfrac{\pi}{4\omega }$.
+    \begin{enumerate}
+        \item El espacio recorrido por el carro hasta el tiempo $t^*$ será la fracción de la circunferencia determinada por el ángulo $\omega t^*$. 
+        $$
+        s_C(t^*)=2\pi R \times \frac{\omega t^*}{2\pi }=R\omega t^*=v_0 t^*=\boxed{\frac{\pi R }{4}}
+        $$
+        Como en $t^*=\pi /(4\omega )$ el gladiador recorre un cuarto de su circunferencia completa, el espacio recorrido será 
+        $$2\pi \times \displaystyle{\frac{\lambda R}{2\times 4}}=\boxed{\pi R\dfrac{\sqrt{2}}{4}}$$
+
+        \item El área $A_M(t^*)$ se calcula como el área debajo de la trayectoria descrita por $M$ hasta el punto de interceptación. En este caso, corresponde al área de un cuadrado de lado $\lambda R/2$ menos un cuarto de circunferencia de radio igual al lado del cuadrado. Es decir:
+        $$
+        \frac{\lambda ^2 R^2 }{4}-\pi \frac{\lambda ^2 R^2 }{16}=\boxed{\frac{R^2}{8}(4-\pi )}
+        $$
+
+        \item Las componentes intrínsecas de la aceleración son la descomposición del vector $\vec{a}^M(t)$ en componente radial (o normal) y componente angular (o tangencial). 
+        $$
+        \vec{a}^M(t)=a_T^M (t)\vec{T}+a_N^M (t) \vec{N}
+        $$
+        Si se deriva la expresión de la velocidad en coordenadas polares del gladiador, se llega a esto mismo.
+        $$
+        \vec{a}^M(t)=(\ddot{r}_M+r_M\dot{\theta}_M) \hat{e}_r+(2\dot{r}_M\dot{\theta }_M+\cancelto{0}{r_M \ddot{\theta }_M})\hat{e}_\theta 
+        $$
+        Usando las expresiones obtenidas para las coordenadas polares y evaluando en $t^*$, se llega a lo siguiente
+        $$
+        \boxed{
+        \begin{cases}
+            \vec{a}_T^M(t^*)=\vec{0}\\
+            \vec{a}_N^M(t^*)=2\dfrac{v_0^2}{R} \hat{e}_\theta 
+        \end{cases}
+        }
+        $$
+
+        \item 
+    \end{enumerate}
+\end{enumerate}
+\end{document}
+ 
