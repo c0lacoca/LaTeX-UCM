@@ -1,0 +1,111 @@
+\section{Fundamento teórico}
+
+\subsection[Introducción a la DFT]{Introducción a la Teoría del Funcional de la Densidad}
+
+Como se ha comentado anteriormente, el objetivo de la DFT es encontrar el estado de mínima energía de un conjunto de átomos con electrones interactuantes. Para ello, planteamos la ecuación de Schrödinger independiente del tiempo, 
+
+\begin{equation}
+    \hat{H} \Phi (\{ \B{r}_i \} , \{ \B{R}_\alpha \}) = E_\text{fund} \Phi (\{ \B{r}_i \} , \{ \B{R}_\alpha \}) \ ; \qquad \B{r}_i , \B{R}_\alpha \equiv \text{posiciones de electrones}  \text{ y núcleos,}
+\end{equation}
+
+donde $\Phi$ es la función de onda global del estado fundamental del sistema y $E_\text{fund}$ la energía asociada a ese estado fundamental. El hamiltoniano del sistema tendrá las siguientes contribuciones\footnote{En adelante, usaremos unidades atómicas: $\hbar = e = m_e = 4\pi \varepsilon_0 = 1$.}:
+
+\begin{equation}
+    \begin{split}
+        \hat{H} = \underbrace{\sum _\alpha \frac{P_\alpha ^2}{2M_\alpha } + \sum _i \frac{p_i^2}{2m_i}}_{(1)} + \underbrace{\frac{1}{2} \frac{1}{4\pi \varepsilon_0} \sum_{i\neq j} \frac{e^2}{|\B{r}_i - \B{r}_j |}}_{(2)} - \underbrace{\frac{1}{4\pi \varepsilon_0} \sum _{i,\alpha } \frac{eZ_\alpha }{|\B{r}_i - \B{R}_\alpha |}}_{(3)} + \underbrace{\frac{1}{2} \frac{1}{4\pi \varepsilon_0} \sum_{\alpha \neq \beta } \frac{Z_\alpha Z_\beta }{|\B{R}_\alpha - \B{R}_\beta |}}_{(4)}
+    \end{split}
+\end{equation}  
+
+\begin{enumerate}
+    \item[(1)] Energías cinéticas de los núcleos atómicos y de los electrones. 
+    \item[(2)] Interacción de Coulomb repulsiva entre electrones (de carga $-e$). Tomamos factor $1/2$ para no considerar dos veces la misma interacción.
+    \item[(3)] Interacción entre electrones y núcleos atractiva (siendo $Z_\alpha $ el número atómico del núcleo $\alpha$).
+    \item[(4)] Interacción entre núcleos repulsiva. 
+\end{enumerate}
+
+El problema de Schrödinger de $N$ cuerpos es, en general, intratable tanto analíticamente como computacionalmente. Por lo tanto, es necesario introducir aproximaciones que se justificarán a continuación. 
+
+\subsubsection{Aproximación de Born-Oppenheimer}
+Formulada por primera vez por los físicos teóricos Robert J. Oppenheimer y Max Born, se basa en el hecho de que las velocidades de los electrones en la red cristalina de cualquier material es siempre mucho mayor que el movimiento de los iones\footnote{Se hablará indistintamente de núcleos y de iones.}. Esto es debido a que los electrones son muy poco masivos en comparación con los núcleos, por lo que, con respecto a los electrones, la red de iones permanece fija y, respecto a los iones, los electrones responden instantáneamente a su movimiento. Esto permite dar una forma aproximada de la función de onda total del sistema de electrones y núcleos separando ambas contribuciones en un producto de funciones $\Phi(\{ \B{r}_i \} , \{ \B{R}_\alpha \}) = \psi_\text{el}(\{\B{r}_i\}) \psi_\text{nucl}(\{ \B{R}_\alpha \})$. Esto nos permitirá resolver por separado el problema para núcleos y electrones, donde la dificultad ahora residirá en resolver la ecuación de Schrödinger para el estado electrónico, para lo cual los teoremas de Hohenberg-Kohn serán fundamentales.
+
+\subsubsection{Densidad electrónica}
+Antes de enunciar los teoremas de Hohenberg-Kohn, debemos introducir la entidad clave que hace que la DFT exista en un primer lugar: la densidad electrónica. En la teoría del funcional de la densidad, intercambiaremos la visión de los electrones como partículas puntuales por la de una densidad electrónica, calculada mecano-cuánticamente según la ecuación \ref{HK}.
+
+\begin{equation} \label{HK}
+    \rho(\B{r}) = N \int \left | \psi_\text{el} (\B{r},\B{r}_2,\ldots) \right |^2 \D{\B{r}_2}\ldots \D{\B{r}_N}
+\end{equation}
+
+\subsubsection{Teoremas de Hohenberg-Kohn}
+
+Los teoremas de Hohenberg-Kohn (HK) establecen dos propiedades importantes sobre la densidad electrónica que hemos introducido anteriormente. El primero enuncia que \emph{la densidad electrónica determina de forma única el estado fundamental que cumple la ecuación de Schrödinger}. Esto es, en presencia de potenciales externos (por la interacción de los iones y los electrones) del tipo $\upsilon (\B{r}) = -\sum_\alpha Z_\alpha /|\B{r} - \B{R}_\alpha |$, existe un \emph{único} funcional de energía $E = E[\rho]$ para una densidad electrónica dada. Este teorema es un resultado sorprendente y que permite reducir la dimensionalidad del problema electrónico, pasando de tener $N$ electrones a centrarnos en las tres coordenadas espaciales de la densidad electrónica. El segundo teorema HK proporciona una condición a la forma de esta densidad imponiendo que la densidad electrónica que representa al estado fundamental del sistema debe \emph{minimizar el funcional de energía}. Es decir,
+
+\begin{equation}
+    E \equiv E[\rho_\text{fund}] \le E[\rho ]
+\end{equation}
+
+De este modo, Hohenberg y Kohn proponen un principio variacional para obtener el estado fundamental de la parte electrónica, en el cual $\rho_\text{fund}$ debe hallarse a través de un método de auto consistencia. Con estos dos teoremas, la energía del estado total puede expresarse según la ecuación \ref{tumismo}, separando la contribución que involucra únicamente a los núcleos.
+
+\begin{equation}\label{tumismo}
+    E_\text{fund} (\{ \B{R}_\alpha \}) = E[\rho_\text{fund}] + \frac{1}{2} \sum _{\alpha \neq \beta } \frac{Z_\alpha Z_\beta }{|\B{R}_\alpha - \B{R}_\beta |}
+\end{equation}
+\subsubsection{Ecuaciones de Kohn-Sham}
+El siguiente paso es obtener el funcional de energía. Para ello, resulta útil realizar la siguiente aproximación descomponiendo la energía\footnote{La contribución a la energía $E_{\scriptscriptstyle XC}$ se conoce como término de \emph{correlación y canje}. Se comentará más adelante.}:
+\begin{align}
+    E[\rho] &= \overbrace{\int \upsilon(\B{r}) \rho(\B{r}) \D{\B{r}}}^{\text{el. - núcleo}} + E_{ee}[\rho] + T_S[\rho] + E_{\scriptscriptstyle XC}[\rho] \notag \\
+            &= \int \upsilon(\B{r}) \rho(\B{r}) \D{\B{r}} + \frac{1}{2} \iint  \frac{\rho(\B{r}) \rho(\B{r'})}{|\B{r} - \B{r'}|} \D{\B{r},\B{r'}} + T_S[\rho] + E_{\scriptscriptstyle XC}[\rho]
+\end{align}
+donde $E_{ee}[\rho]$ representa la interacción electrón-electrón -- que escribimos en la forma de densidad de carga -- y $T_S[\rho]$ se define como la energía cinética de los electrones \emph{no interactuantes},
+\begin{equation}
+    T_S[\rho] = \sum_{n=1}^N \varepsilon_n - \int V(\B{r}) \rho(\B{r}) \D{\B{r}} \ , \qquad \rho(\B{r}) = \sum_{n=1}^N |\psi_n(\B{r})|^2
+\end{equation}
+donde las funciones de onda monoelectrónicas cumplen la ecuación de Schrödinger, 
+\begin{equation} \label{KS}
+    \left [ -\frac{1}{2}\laplacian + V(\B{r}) \right ] \psi_n(\B{r}) = \varepsilon_n \psi_n (\B{r})
+\end{equation}
+Bajo esta premisa, Kohn y Sham demostraron que, al minimizar el funcional de energía respecto de la densidad (tomada como suma de amplitudes de probabilidad de funciones de onda monoelectrónicas), el potencial $V(\B{r})$ de la ecuación \ref{KS} toma necesariamente la siguiente forma.
+\begin{align}
+    V(\B{r}) &= \upsilon (\B{r}) + \int \frac{\rho(\B{r'})}{|\B{r} - \B{r'}|} \D{\B{r'}} + \fdv{E_{\scriptscriptstyle XC}}{\rho(\B{r})} \equiv \upsilon(\B{r}) + V_H  + V_{\scriptscriptstyle XC} \\
+    E_\text{\tiny   KS} [\rho] &= \sum_{n=1}^N \varepsilon_n - E_{ee}[\rho] - \int V_{\scriptscriptstyle XC}(\B{r}) \rho (\B{r}) \D{\B{r}} + E_{\scriptscriptstyle XC} [\rho] \label{func_KS}
+\end{align}
+De este modo, el problema se reduce a la resolución de $N$ ecuaciones de Schrödinger para las funciones de onda monoelectrónicas, lo que se conoce como aproximación \emph{one electron}, en la que el electrón percibe un potencial promedio producido por el resto de electrones e iones.\footnote{La aproximación \emph{one electron} funciona bien en sistemas en los que la correlación entre electrones es poco importante. En sistemas altamente correlacionados, como sistemas magnéticos, la DFT no produce buenos resultados.}. No obstante, utilizando las ecuaciones de Kohn-Sham vemos que, para determinar la densidad electrónica, tenemos que conocer las funciones de onda monoelectrónicas de primera mano; y que, para determinar las funciones de onda, necesitamos conocer la densidad electrónica, lo cual nos lleva a un argumento circular. Entonces, el procedimiento general para la DFT debe ser el siguiente:
+
+\begin{enumerate}
+    \item A partir de una suposición inicial de la densidad electrónica, $\rho_\text{in}$, determinamos el potencial $V_\text{in}(\B{r})$.
+    \item A partir del potencial inicial, resolvemos las ecuaciones de Kohn-Sham, obteniendo las funciones monoelectrónicas.
+    \item Con las funciones de onda monoelectrónicas, calculamos la densidad electrónica asociada, $\rho_\text{out}$. Con ella, comparamos con la densidad de partida:
+    \begin{itemize}
+        \item Si las densidades son distintas, repetimos el procedimiento con una densidad que contenga parte de la infomación de la densidad de entrada y de salida. 
+        \item Si las densidades son consistentes, podemos calcular la energía y utilizarla para calcular el estado total con contribución electrónica e iónica.
+    \end{itemize}
+\end{enumerate}
+Una vez tenemos la energía, nos queda ocuparnos de la contribución de los núcleos. Las fuerzas electrostáticas inducidas por la densidad electrónica generan un desplazamiento de la red iónica si son muy intensas. Por tanto, se calculan las fuerzas asociadas a esta densidad sobre los núcleos y, si superan un cierto valor umbral, los núcleos se mueven y se reinicia el procedimiento. El bucle de auto consistencia se repite hasta la convergencia de fuerzas y de densidad. 
+
+\subsubsection{Aproximación de pseudo-potencial}
+Para reducir la complejidad del método de auto consistencia, incluimos a los electrones de capas más profundas junto con los núcleos atómicos en un nuevo núcleo o \emph{core}. Esta aproximación queda justificada por el hecho de que la mayor parte de las propiedades electrónicas del átomo quedan determinadas por los electrones más externos. La formación del core conlleva un potencial efectivo que, al resolver la ecuación de Kohn-Sham correspondiente, retorna pseudo-orbitales (que dependen de la distancia al core) con un cierto radio de corte\footnote{La elección de este radio de corte no es trivial en absoluto y depende del elemento químico del que se trate.}. A partir del radio de corte, el orbital monoelectrónico recupera el valor original fuera de la aproximación de pseudo-potencial, mientras que, por debajo del radio de corte, decaen de forma suave hasta el origen\footnote{Si, por debajo del radio de corte, las funciones de onda tuviesen ceros ($n>1$), el cálculo de las interacciones se complicaría y no podría hacerse de forma suave.}.
+
+\subsubsection[Aproximación LDA]{Término de canje y correlación y aproximación LDA}
+Hasta ahora no hemos hablado de la forma del término de potencial $V_{\scriptscriptstyle XC}$, correspondiente a la energía de correlación y canje de la parte electrónica. En esta contribución se incluyen todos los efectos cuánticos no tenidos en cuenta de la interacción entre electrones, como el efecto de canje producido por el principio de exclusión de Pauli (repulsión efectiva) o las correlaciones entre electrones (que, de forma efectiva, también favorece energéticamente la separación entre electrones). Existen diversas aproximaciones a este término de potencial, pero la más sencilla (y la usada originalmente en el artículo KS) es la de suponer que, en cada punto, la energía por electrón $\varepsilon_{\scriptscriptstyle XC}$ es la misma que la de un gas de electrones de densidad homogénea.
+
+\begin{align}
+    \varepsilon_{\scriptscriptstyle XC}(\rho(\B{r})) &= \varepsilon_{\scriptscriptstyle XC}{}^{\text{hom.}}[\rho]\ , \quad \varepsilon_{\scriptscriptstyle XC}{}^{\text{hom.}}[\rho]  \text{ conocido.} \\
+    \implies E_{\scriptscriptstyle XC}^\text{\tiny (LDA)}[\rho] &= \int \D{\B{r}} \ \rho(\B{r}) \varepsilon_{\scriptscriptstyle XC}(\rho)\\
+    V_{\scriptscriptstyle XC} &= \fdv{E_{\scriptscriptstyle XC}^\text{\tiny (LDA)}[\rho]}{\rho(\B{r})} = \pdv{[\rho(\B{r}) \varepsilon_{\scriptscriptstyle XC}(\rho(\B{r}))]}{\rho(\B{r})}
+\end{align}
+
+Esta aproximación se conoce como de densidad local (\emph{Local Density Aproximation}) debido a que se toma la energía de correlación dependiendo únicamente de la posición en el espacio, no de la forma funcional de la densidad. 
+% El código FIREBALL utiliza la aproximación LDA calculando las interacciones con las funciones de onda electrónicas de tres centros (como se verá más adelante), pudiendo tabular las integrales y recurrir a ellas para el resto de interacciones mediante interpolación, lo que disminuye el tiempo de cómputo de la simulación significativamente. 
+\subsubsection{Teorema de Bloch}
+El teorema de Bloch es un resultado central de la física del estado sólido. Bajo la actuación de un potencial periódico (que es el caso de los sólidos cristalinos infinitos), este teorema garantiza que, para un electrón con función de onda $\psi_\B{k} (\B{r}) = \exp(i\B{k}\cdot \B{r}) u_\B{k}(\B{r})$, donde $\B{k}$ es el vector de onda del electrón (puntos de la red recíproca) y $u_\B{k}$ es una función con la misma periodicidad de la red directa; podemos reformular las ecuaciones de Kohn-Sham para pasar de tener un número infinito de átomos y de celdas de la red directa a infinitos puntos $k$ de la red recíproca. Este infinito número de puntos $k$ puede reducirse a un cálculo de un número finito de puntos $k$ especiales que caracterizan la primera zona de Brillouin, simplificando considerablemente el problema \cite{Baldereschi} \cite{Monkhorst}.
+\subsection{El código FIREBALL}
+Como ya hemos mencionado, FIREBALL es un código de simulación basado en la DFT, que realiza la minimización de la energía del sistema que obedece la ecuación de Schrödinger implementando las aproximaciones vistas anteriormente. Particularmente, se basa en un modelo de electrones fuertemente enlazados (o de \emph{tight-binding}, que se alimenta con parámetros calculados mediante DFT) tomando combinaciones lineales de orbitales atómicos (LCAO, \emph{Linear Combination of Atomic Orbitals}) para construir pseudo-orbitales -- también llamados \emph{fireballs} -- con un radio de corte. El código FIREBALL utiliza la aproximación LDA calculando las interacciones con las funciones de onda electrónicas de tres centros, pudiendo tabular las integrales y recurrir a ellas para el resto de interacciones mediante interpolación, lo que disminuye el tiempo de cómputo de la simulación significativamente. Además, en el método computacional se remplaza el funcional de energía de Kohn-Sham (ecuación \ref{func_KS}) con el funcional de Harris:
+
+\begin{equation}
+    E^\text{Harris} [\rho_\text{in}] = \sum_{n=1}^N \varepsilon_n - E_{ee} [\rho_\text{in}] - \int V_{\scriptscriptstyle XC} \rho _\text{in} (\B{r}) \D{\B{r}} + E_{\scriptscriptstyle XC} [\rho_\text{in }] \label{HArris} \ , 
+\end{equation}
+que únicamente se diferencia del de Kohn-Sham en que utilizamos la densidad electrónica inicial para realizar el cálculo de la energía en vez de la de salida. Esto es lo que nos permite tener a nuestra disposición las interacciones tabuladas para tres centros, como mencionamos anteriormente. Al tomar este funcional, cometemos un error en las energías que de segundo orden con respecto a la diferencia de densiad inicial y de autoconsistencia, $E_\text{H} - E_\text{KS} = \Cl{O}^2(\rho_\text{in} - \rho_\text{AC})$; de modo que, al llegar a la autoconsistencia, la energía del estado fundamental será la misma para el funcional de Harris que para el de Kohn-Sham.  
+\subsubsection{Minimización de la energía total}
+La minimización de la energía total en el programa FIREBALL puede realizarse a través de dos formas: con el método de los gradientes conjugados (que no usaremos en este caso) y con un método basado en la dinámica molecular. La minimización por dinámica molecular se realiza mediante \emph{dynamical quenching}. En él, se fija la temperatura a 0 K y se deja evolucionar el sistema mientras que la temperatura aumenta al aumentar la energía cinética y la energía potencial disminuye. Cuando la energía potencial sube -- es decir, se produce un \emph{quenching} --, se fija de nuevo la temperatura a 0 K y se continúa con el proceso. Conforme se produzcan procesos de \emph{quenching}, la temperatura incrementará menos hasta que finalmente permanezca a cero, punto en el cual la energía total se habrá minimizado.
+% \begin{itemize}
+%     \item Gradientes conjugados: La minimización de la energía total del sistema, que en general depende de todas las posiciones atómicas, se realiza variando la energía en las dirección de máximo cambio (gradientes respecto a las posiciones de los átomos). En cada paso, se calcula el gradiente de la energía (equivalente a una fuerza) y se haya el valor de desplazamiento en dirección del gradiente para el cual se minimiza la energía. Este proceso se realiza iterativamente para cada posición atómica, tomando a su vez combinaciones lineales de gradientes de iteraciones anteriores y sucesivas para una convergencia de la energía más rápida. 
+ 
+% \end{itemize}
