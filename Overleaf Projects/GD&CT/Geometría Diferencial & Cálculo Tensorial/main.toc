@@ -1,0 +1,66 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {part}{I\hspace {1em}Teoría}{4}{part.1}%
+\contentsline {chapter}{\numberline {1}El espacio euclídeo $\mathbb {R}^n$. Teoría de curvas}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Definición}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Producto vectorial y producto mixto}{6}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Isometrías en $\mathbb {R}^3$}{7}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Curvas parametrizadas}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Reparametrizaciones}{8}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}Longitud de arco}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Longitud de arco de una circunferencia}{9}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Invariancia de la longitud de arco en $\mathbb {R}^n$}{10}{subsection.1.3.2}%
+\contentsline {paragraph}{Notación:}{10}{section*.4}%
+\contentsline {subsection}{\numberline {1.3.3}Parámetro natural de una curva}{11}{subsection.1.3.3}%
+\contentsline {paragraph}{Notación:}{12}{section*.5}%
+\contentsline {section}{\numberline {1.4}Curvatura}{13}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Variación de la curva}{16}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Curvaturas de una curva}{17}{subsection.1.4.2}%
+\contentsline {paragraph}{Caso particular: curvas en $\mathbb {R}^2$}{18}{section*.6}%
+\contentsline {subsection}{\numberline {1.4.3}Radio de curvatura}{19}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Sistema de Frenet en parametrización natural}{20}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Interpretación geométrica de la curvatura en $\mathbb {R}^2$}{20}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Reconstrucción de una curva a partir de su curvatura}{20}{subsection.1.4.6}%
+\contentsline {section}{\numberline {1.5}Fórmulas de Frenet}{21}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Curvas planas en $\mathbb {R}^3$}{23}{subsection.1.5.1}%
+\contentsline {chapter}{\numberline {2}Superficies. Primera forma fundamental y cálculo tensorial}{25}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Concepto de superficie}{25}{section.2.1}%
+\contentsline {paragraph}{Notación:}{25}{section*.13}%
+\contentsline {section}{\numberline {2.2}Curvas en una superficie}{27}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Curvas coordenadas y coordenadas curvilíneas}{27}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Vectores tangentes a la superficie $S$ y espacio o plano tangente}{28}{subsection.2.2.2}%
+\contentsline {paragraph}{Notación:}{28}{section*.17}%
+\contentsline {section}{\numberline {2.3}Primera forma fundamental}{29}{section.2.3}%
+\contentsline {paragraph}{Notación:}{29}{section*.18}%
+\contentsline {subsection}{\numberline {2.3.1}Coordenadas ortogonales}{31}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Elemento de área de una superficie}{31}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Vectores contravariantes y covariantes}{32}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Reparametrizaciones}{32}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Leyes de transformación}{34}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Base dual. Componentes covariantes de un vector}{35}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Tensores}{38}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Geometría riemanniana}{39}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Fundamentos del cálculo tensorial}{41}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Tensores especiales}{42}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Segunda forma fundamental, curvatura media y gaussiana}{44}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Segunda forma fundamental}{44}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Clasificación de los puntos de una superficie}{46}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Curvaturas principales, media y gaussiana}{47}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Curvaturas normales principales (de $S$ en $P$)}{48}{subsection.3.2.1}%
+\contentsline {paragraph}{Notación:}{48}{section*.27}%
+\contentsline {section}{\numberline {3.3}Fórmulas de Weingarten y de Gauss. Símbolos de Christoffel}{50}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Propiedades de los símbolos de Christoffel}{51}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Simetrías}{51}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Ley de transformación de los símbolos de Christoffel}{53}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Tensor de curvatura de Riemann}{53}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Tensor de curvatura de Riemann}{54}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Teorema egregio de Gauss}{55}{section.3.6}%
+\contentsline {paragraph}{Comentarios:}{55}{section*.36}%
+\contentsline {chapter}{\numberline {4}Curvatura geodésica y geodésicas}{56}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Curvatura geodésica}{56}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Geodésicas}{57}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ecuación de las geodésicas}{58}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Propiedades extremales de las geodésicas: arcos de longitud mínima}{59}{section.4.3}%
+\contentsline {part}{II\hspace {1em}Ejercicios sin corregir}{61}{part.2}%
+\contentsline {chapter}{Tema 1}{63}{chapter*.42}%
+\contentsline {chapter}{Tema 2}{68}{chapter*.45}%
+\contentsline {chapter}{Tema 3}{70}{chapter*.46}%
