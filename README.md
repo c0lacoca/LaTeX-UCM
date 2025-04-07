@@ -16,3 +16,5 @@ Proyectos de LaTeX de universidad del grado de física de la UCM y otros. Este r
   * Corrección de examen de EvAU (Madrid) de Matemáticas II del curso 2022-2023 (`Corrección_EvAU23.pdf`).
 * **Proyectos misceláneos.**
   * Proyecto sin acabar: Ejercicio de Twitter (X) de mecánica clásica.
+
+Algunos proyectos están compilados (con pdf generado) y todos están guardados en archivos comprimidos. Cada archivo comprimido contiene el código en archivos de extensión `tex` con los diferentes archivos externos (imágenes, bibliografías, etc.) que hubiera. Para estructurar y mantener ordenados los proyectos, en la mayoría existe un archivo (`main.tex`) que se compila como el principal, siendo los otros archivos de gestión de paquetes o diferentes capítulos/partes del documento. 
