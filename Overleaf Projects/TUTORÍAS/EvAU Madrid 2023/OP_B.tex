@@ -1,0 +1,312 @@
+\section*{Opción B:}
+\begin{mybox}
+    \paragraph{B.1-} Dado el sistema $\left \{ \begin{array}{cccccc}
+     (a+1)x & + & 4y     &   &   &=0  \\
+            &   & (a-1)y & + & z &=3\\
+     4x     & + & 2ay    & + & z &=3       
+    \end{array} \right .$ , se pide:
+    \begin{enumerate}
+        \item[(a)] Discutirlo en función del parámetro $a$.
+        \item[(b)] Resolverlo para $a = 3$. 
+        \item[(c)] Resolverlo para $a = 5$. 
+    \end{enumerate}
+\end{mybox}
+\paragraph{Solución:}
+\begin{enumerate}
+    \item[(a)] La discusión de este sistema de ecuaciones consistirá en clasificarlo en función de la existencia de soluciones, dependiendo del parámetro $a$. En primer lugar, para que un sistema posea una única solución (es decir, sea \emph{compatible determinado}). El rango de la matriz asociada al sistema, $M$, debe ser el mismo que el de la matriz ampliada, $M^*$, que a su vez debe ser igual al orden de la matriz $M$.
+    $$
+    r(M)=r(M^*)=N=3\iff \det(M)\neq 0
+    $$
+    La matriz $M$ y la ampliada $M^*$ son:
+    $$
+    M=\left [ \begin{array}{ccc}
+         (a+1) & 4     & 0  \\
+          0    & (a-1) & 1  \\
+          4    & 2a    & 1  
+    \end{array} \right ] \qquad \qquad M^*=\left [ \begin{array}{ccc|c}
+         (a+1) & 4     & 0 & 0\\
+          0    & (a-1) & 1 & 3\\
+          4    & 2a    & 1 & 3 
+    \end{array} \right ] 
+    $$
+    \begin{equation*}
+        \begin{split}
+            \det(M)=a^2-1+16-2a(a+1)\equiv 0 \rightarrow a^2+2a-15=0 \implies \begin{cases}
+                a=3\\a=-5
+            \end{cases}
+        \end{split}
+    \end{equation*}
+    Es decir, si $a\neq \{ -5,3\} $, el sistema es \textbf{compatible determinado}.
+    \begin{enumerate}
+        \item[$\rightarrow $]$a=-5: M=\left [ \begin{array}{ccc}
+         -4 & 4     & 0  \\
+          0    & -6 & 1  \\
+          4    & -10    & 1  
+    \end{array} \right ] \ , \ M^*=\left [ \begin{array}{ccc|c}
+         -4 & 4     & 0  &0\\
+          0    & -6 & 1  &3\\
+          4    & -10    & 1 & 3
+    \end{array} \right ]$ \\
+    
+    En este caso, el rango de $M$ es el rango del mayor menor no nulo. \\
+    
+    Como $\left | \begin{array}{cc}
+        -4 & 4 \\
+        0 & -6
+    \end{array} \right |\neq 0 \ , \ r(M)=2$. \\
+    
+    En el caso de $M^*$, el mayor menor no nulo también es de rango 2.
+    Entonces, según el teorema de Rouché-Frobenius, como $r(M)= r(M^*)<3$, el sistema es \textbf{compatible indeterminado}.
+    \end{enumerate}
+
+    \item[(b)]
+    \begin{enumerate}
+        \item[$\rightarrow $] $a=3: M=\left [ \begin{array}{ccc}
+         4 & 4     & 0  \\
+          0    & 2 & 1  \\
+          4    & 6    & 1 
+    \end{array} \right ]$.\\
+    
+    En este caso, $r(M)=r(M^*)=2$, por lo que el sistema es \textbf{compatible indeterminado}. Resolvemos por eliminación gaussiana:
+    $$
+    \left [ \begin{array}{ccc|c}
+         4 & 4     & 0&0  \\
+          0    & 2 & 1  &3\\
+          4    & 6    & 1 &3
+    \end{array} \right ] \xlongrightarrow{F_3'=F_3-F_1} \left [ \begin{array}{ccc|c}
+         4 & 4     & 0&0  \\
+          0    & 2 & 1  &3\\
+          0    & 2    & 1 &3
+    \end{array} \right ] \implies \boxed{\begin{cases}
+        x=\frac{1}{2}(\lambda -3)&\\
+        y=\frac{1}{2}(3-\lambda )& ,\ \lambda \in \mathbb{R}\\
+        z=\lambda 
+    \end{cases}}
+    $$
+    \end{enumerate}
+
+    \item[(c)] $a=5$. Como $a\neq \{ -5,3 \}$, el sistema es compatible determinado. Usando el método de la eliminación gaussiana, se puede reducir el sistema a:
+    $$
+    \begin{cases}
+        -11x+z=3\\
+        -6x+z=3
+    \end{cases} \implies \boxed{\begin{cases}
+        x=0\\
+        y=0\\
+        z=3
+    \end{cases}}
+    $$
+\end{enumerate}
+\noindent\rule{\textwidth}{0.5pt}
+\begin{mybox}
+    \paragraph{B.2-}Dada la función real de variable real definida sobre su dominio como  
+    $$
+    f(x)=\begin{cases}
+        \dfrac{x^2}{2+x^2} & \text{si }\   x\le -1\\\\
+        \dfrac{2x^2}{3-3x} & \text{si }\   x>-1
+    \end{cases}\quad ,$$
+    se pide:
+    \begin{enumerate}
+        \item[(a)] Estudiar la continuidad de la función en $\mathbb{R}$.
+        \item[(b)] Calcular el siguiente límite: $\displaystyle{\lim_{x\to -\infty }} f(x)^{2x^2-1}$.
+        \item[(c)] Calcular la siguiente integral: $\displaystyle{\int_{-1}^0} f(x) \odif{x}$.
+    \end{enumerate}
+\end{mybox}
+\noindent\rule{\textwidth}{0.5pt}
+\textit{\textcolor{red}{Nota: En el primer apartado, se pide estudiar la continuidad de la función en toda la recta real. No obstante, como se verá más adelante, existe un punto conflictivo en $x=1$ que impide poder estudiar la continuidad en ese punto. Esto proviene del hecho de que la 'continuidad' o 'discontinuidad' de una función se define únicamente para puntos pertenecientes al dominio de la función, lo cual excluye a $x=1$. Al evaluar este ejercicio, se contará como válido que sea discontinua en este punto, pero en principio no se debería poder llegar a esa conclusión.}}\\
+\noindent\rule{\textwidth}{0.5pt}
+\paragraph{Solución:}
+\begin{enumerate}
+    \item[(a)] La función $f(x)$ está compuesta de dos funciones racionales de polinomios, ambas continuas en sus dominios de definición \emph{excepto} en $x=-1$, punto en el cual se anula el denominador de la función del segundo tramo. Por tanto, se debe estudiar la continuidad tanto en $x=1$ como en el punto de cambio de dominio de definición, $x=-1$.
+    \begin{enumerate}
+        \item[$\rightarrow $]$x=-1$: La condición de continuidad para $f(x)$ en $x=-1$ es que:
+        $$
+        \lim_{x\to -1^+} f(x)=\lim_{x\to -1^-} f(x)=f(-1)
+        $$
+        \begin{gather*}
+            \lim_{x\to -1^+} f(x)=\lim_{x\to -1^+} \frac{2x^2}{3-3x}=\frac{2}{6}=\frac{1}{3}\\
+            \lim_{x\to -1^-} f(x)=\lim_{x\to -1^-} \frac{x^2}{2+x^2}=\frac{1}{2+1}=\frac{1}{3}\\
+            f(-1)=\frac{(-1)^2}{2+(-1)^2}=\frac{1}{3}
+        \end{gather*}
+        Por tanto, como los límites laterales coinciden con el valor de la función en $x=-1$, \textbf{la función es continua} en $x=-1$.
+
+        \item[$\rightarrow $]$x=1$: 
+        $$
+        \lim_{x\to 1^\pm } \frac{2x^2}{3-3x} \overset{\scriptsize \begin{array}{c}
+             2/0^\pm   \\
+              \uparrow
+        \end{array}}{=}\pm \infty  \implies \nexists \lim_{x\to 1} f(x)
+        $$
+        Como los límites laterales no existen, la función \textbf{es discontinua }en $x=1$ (inevitable, salto infinito).
+    \end{enumerate}
+
+    \item[(b)] 
+    \begin{equation*}
+        \begin{split}
+            \lim_{x\to -\infty } f(x)^{2x^2-1}&=\lim_{x\to -\infty } \left ( \frac{x^2}{2+x^2} \right )^{2x^2-1}=\lim_{x\to +\infty }\left ( \frac{x^2}{2+x^2} \right )^{2x^2-1}=\left . 1^\infty  \right ]_{\text{IND}}\\
+            &=\lim_{x\to +\infty } \left ( \frac{x^2 \textcolor{red}{+2-2}}{x^2+2} \right )^{2x^2-1}=\lim_{x\to +\infty } \left ( \frac{x^2+2}{x^2+2}-\frac{2}{x^2+2} \right )^{2x^2-1}\\
+            &=\lim_{x\to +\infty }\left ( 1+\frac{-2}{x^2+2} \right )^{2x^2-1}=\lim_{x\to +\infty }\left ( 1+\frac{1}{x^2+2/(-2)} \right )^{2x^2-1}\\
+            &=\textcolor{red}{\lim_{x\to +\infty }\left ( 1+\frac{1}{x^2+2/(-2)} \right )}^{\textcolor{red}{\frac{x^2+2}{-2}}\textcolor{blue}{\cdot \frac{-2}{x^2+2}}\cdot (2x^2-1)}\\
+            &=\textcolor{red}{e}^{\displaystyle{\lim_{x\to +\infty }} \left ( -2\cdot \frac{2x^2-1}{x^2+2} \right )}=\cdots =\boxed{e^{-4}}
+        \end{split}
+    \end{equation*}
+
+    \item[(c)] Resolvemos la integral $I=\displaystyle{\int _{-1}^0 \frac{2x^2}{3-3x} \odif{x}} $. Para ello, primero realizamos la división de polinomios.
+    \begin{equation*}
+        \begin{split}
+            \textcolor{blue}{\polylongdiv[style=D]{2x^2}{3-3x}\implies \frac{2x^2}{3-3x}=\frac{2}{3}\left [ -x-1+\frac{1}{1-x} \right ]}
+        \end{split}
+    \end{equation*}
+    Por lo que la integral a resolver es entonces:
+    \begin{equation*}
+        \begin{split}
+            I=\frac{2}{3}\int _{-1}^0 \left ( -x-1+\frac{1}{1-x} \right ) \odif{x}&=\frac{2}{3} \left [ -\frac{x^2}{2}-x-\ln |1-x| \right ]_{-1}^0\\
+            \text{\footnotesize (Regla de Barrow): }&=-\frac{2}{3} \left ( -\frac{1}{2}+1-\ln2 \right )\\
+            &=\boxed{\frac{1}{3}(2\ln 2-1)}
+        \end{split}
+    \end{equation*}
+
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=.6]{EvAU_B2.png}
+        \label{fig:enter-label2}
+    \end{figure}  
+\end{enumerate}
+
+\noindent\rule{\textwidth}{0.5pt}
+\newpage
+\begin{mybox}
+    \paragraph{B.3-} Dada la recta $r\equiv \dfrac{x-1}{2}=\dfrac{y}{1}=\dfrac{z+1}{-2}$, el plano $ \pi : x-z=2$ y el punto $ A(1,1,1)$, se pide:
+    \begin{enumerate}
+        \item[(a)] Estudiar la posición relativa de $r$ y $\pi$ y calcular su intersección, si existe. 
+        \item[(b)] Calcular la proyección ortogonal del punto $A$ sobre el plano $\pi$. 
+        \item[(c)] Calcular el punto simétrico del punto $A$ con respecto a la recta $r$. 
+    \end{enumerate}
+\end{mybox}
+\paragraph{Solución:}
+\begin{enumerate}
+    \item[(a)] Si la intersección entre el plano y la recta da un punto, la posición relativa entre ellos será secantes; si la intersección es la misma recta $r$, entonces $r$ estará contenida en $\pi$; y si la intersección es nula, entonces la recta y el plano son paralelos. Calculamos la intersección: en primer lugar, la recta $r$ en ecuaciones paramétricas es:
+    \begin{equation*}
+        \begin{split}
+        r\equiv \begin{cases}
+            x=1+2\lambda& \\
+            y=\lambda &,\  \lambda \in \mathbb{R}\\
+            z=-1-2\lambda 
+            \end{cases}\implies r\cap \pi: x-z&=(1+2\lambda )-(-1-2\lambda )=2\iff \lambda =0 \\
+            &\implies \boxed{r\cap \pi =P(1,0,-1)}            
+        \end{split}
+    \end{equation*}
+    Como la intersección es un único punto, la recta y el plano son \textbf{secantes}.
+
+    \item[(b)] Buscamos ahora la proyección ortogonal de $A$ en el plano $\pi$, como aparece representado en el siguiente diagrama:
+    
+    \begin{minipage}{.4\textwidth}
+        \includegraphics[scale=.35]{b3_b.png}
+    \end{minipage}
+    \begin{minipage}{.54\textwidth}
+        Para encontrar el punto $A_\pi$, trazaremos una recta perpendicular al plano $\pi$ que pase por el punto $A$. Esta recta, $s$, tendrá como vector director $\Vec{u}_s$ el vector normal del plano $\pi$, $\vec{n}=(1,0,-1)$. Por tanto, la recta $s$ tendrá como ecuaciones paramétricas:
+        \begin{equation*}
+            \begin{split}
+               s\equiv  \begin{cases}
+                    x=1+\lambda \\
+                    y=1\\
+                    z=1-\lambda 
+                \end{cases}
+            \end{split}
+        \end{equation*}
+    \end{minipage}
+    La intersección entre el plano y la recta $s$ es:
+    \begin{equation*}
+        \begin{split}
+            s\cap \pi : x-z=(1+\lambda )-(1-\lambda )=2 \implies \lambda =1 \implies \boxed{A_\pi (2,1,0)}
+        \end{split}
+    \end{equation*}
+
+    \item[(c)] Buscamos ahora el punto simétrico de $A$, $A'$, con respecto a la recta $r$, como se ve en el dibujo.
+    
+    \begin{minipage}{.4\textwidth}
+        \includegraphics[scale=0.3]{b3_c.png}
+    \end{minipage}
+    \begin{minipage}{.54\textwidth}
+        Para encontrar el punto simétrico $A'$, trazaremos un plano auxiliar $\alpha $ perpendicular a la recta $r$, que tendrá por tanto vector perpendicular $\vec{n}=\vec{u}_r=(2,1,-2)$; y que pase por el punto $A$. La intersección de la recta $r$ con el plano auxiliar nos dará el punto medio entre $A$ y $A'$, $M$. Una vez encontrado el punto $M$, podemos obtener las coordenadas de $A'$ sabiendo que es su punto medio con $A$. En primer lugar, la ecuación del plano auxiliar es:
+        \begin{equation*}
+            \begin{split}
+                \alpha : n_1 x+ n_2 y+n_3 z =2x+y-2z=d
+            \end{split}
+        \end{equation*}
+    \end{minipage}
+    
+    Sabiendo que el punto $A$ pertenece a $\alpha $, sustituimos las coordenadas de $A$ para encontrar $d$. 
+    $$
+    2(1)+(1)-2(1)=d=1 \implies \alpha :2x+y-2z=1
+    $$
+    El punto $M$ es la intersección entre $\alpha $ y $r$: 
+    \begin{equation*}
+        \begin{split}
+            \alpha \cap r: 2x+y-2z=2(1+2\lambda )+ \lambda -2(-1-2\lambda ) &\iff \lambda =-1/3\\
+            &\implies M(1/3,-1/3,-1/3)
+        \end{split}
+    \end{equation*}
+    Por último, $M$ es el punto medio de $A$ y $A'$: 
+    \begin{equation*}
+        \begin{split}
+            M=\frac{A+A'}{2} \implies \begin{cases}
+                \dfrac{a_1+a_1'}{2}=\dfrac{1+a_1'}{2}=\dfrac{1}{3}&\implies a_1'=-\dfrac{1}{3}\\\\
+                \dfrac{a_2+a_2'}{2}=\dfrac{1+a_2'}{2}=-\dfrac{1}{3}&\implies a_2'=-\dfrac{5}{3}\\\\
+                \dfrac{a_3+a_3'}{2}=\dfrac{1+a_3'}{2}=-\dfrac{1}{3}&\implies a_3'=-\dfrac{5}{3}
+            \end{cases}\\
+            \boxed{A'(-1/3,-5/3,-5/3)}
+        \end{split}
+    \end{equation*}
+\end{enumerate}
+
+\noindent\rule{\textwidth}{0.5pt}
+\begin{mybox}
+    \paragraph{B.4-} La longitud de la sardina del Pacífico (\textit{Sardinops sagax}) se puede considerar que es una variable aleatoria con
+distribución normal de media $175$ mm y desviación típica $25.75$ mm.
+\begin{enumerate}
+    \item[(a)] Una empresa envasadora de esta variedad de sardinas solo admite como sardinas de calidad
+aquellas con una longitud superior a $16$ cm. ¿Qué porcentaje de las sardinas capturadas por un buque 
+pesquero serán de la calidad que espera la empresa envasadora?  
+
+\item[(b)] Hallar una longitud $t < 175$ mm tal que entre $t$ y $175$ mm estén el 18 $\%$ de las sardinas capturadas. 
+\item[(c)]  En altamar se procesan las sardinas en lotes de $10$. Posteriormente se devuelven al mar las
+sardinas de cada lote que son menores de $15$ cm por considerarlas pequeñas. ¿Cuál es la probabilidad de
+que en un lote haya al menos una sardina devuelta por pequeña?  
+\end{enumerate}
+\end{mybox}
+\paragraph{Solución:}
+\begin{enumerate}
+    \item[(a)] La variable aleatoria que vamos a estudiar es la 'longitud de las sardinas': \\$X\sim N(\mu =175 \text{ mm}, \sigma =25.75 \text{ mm})$. Estamos interesados en saber el porcentaje de sardinas de calidad admitida, que son aquellas cuya longitud $X>160$ mm. Por tanto, deberemos calcular la probabilidad de que $X>160$, $P(X>160).$ Para ello, primero tipificaremos la distribución normal de $X$.
+    \begin{align*}
+        X&\longrightarrow Z\sim N(\mu =0 , \sigma =1) & Z\equiv \frac{X-\mu }{\sigma }\\
+        P(X>160) &\longrightarrow P\left (Z>\frac{160-\mu }{\sigma }\right )=P(Z>-0.58)&
+    \end{align*}
+    $$
+    P(Z>-0.58)=P(Z<0.58)=0.7190 \quad \text{\footnotesize (mirado en la tabla)}
+    $$
+    El porcentaje de sardinas de calidad es $\boxed{71.9 \%}$ .
+
+    \item[(b)] Buscamos una longitud $t<175$ mm que cumpla que $P(t<X<175=\mu )=0.18$. Pasando a variable tipificada, esto queda:
+    $$
+    P\left ( \frac{t-\mu }{\sigma }<Z<0 \right )=\underbrace{P(Z<0)}_{0.5}-P\left (Z<\frac{t-\mu }{\sigma } \right )=0.18 \implies P\left (Z<\frac{t-\mu }{\sigma } \right )=0.32
+    $$
+    Como $(t-\mu) /\sigma $ es negativo, tenemos que convertirlo a un valor positivo. 
+    \begin{equation*}
+        \begin{split}
+            P\left (Z<\frac{t-\mu }{\sigma } \right ) = 1- P\left (Z<\frac{\mu -t }{\sigma } \right )&\implies P\left (Z<\frac{\mu -t }{\sigma } \right )=0.68\\
+            &\implies Z=0.47 \quad \text{\footnotesize (valor de probabilidad más cercano es $0.6808$)} \\&\implies \boxed{t\approx 162 \text{ mm}}
+        \end{split}
+    \end{equation*}
+
+    \item[(c)] La 'sardina procesada' ($X$) es una variable que toma dos valores: o bien es devuelta por pequeña ($X=1$) o bien no es devuelta ($X=0$). Por tanto, $X\sim \text{Ber}(p=P(X<150))$. Esta probabilidad $p$ se calcula de la misma forma que hemos venido haciendo.
+    $$
+    p=P(X<150)=P(Z<-0.97)=1-P(Z<0.97)=0.166
+    $$
+    La variable $Y$ 'sardinas pequeñas en lotes de $n=10$' sigue una distribución binormal:\\ $Y\sim \text{Bin}(n=10,p=0.166)$. La probabilidad de que al menos una sardina haya sido devuelta es:
+    $$
+    P(Y\ge 1)=1-P(Y=0)=1-\binom{10}{0}p^0 (1-p)^{10} = 1-(1-0.166)^{10}=\boxed{0.8372}
+    $$
+\end{enumerate} 
+
+\noindent\rule{\textwidth}{0.5pt}
