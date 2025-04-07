@@ -1,0 +1,24 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
+\contentsline {section}{\numberline {2}Objetivos}{3}{section.2}%
+\contentsline {section}{\numberline {3}Fundamento teórico}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introducción a la DFT}{3}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Aproximación de Born-Oppenheimer}{4}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Densidad electrónica}{4}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Teoremas de Hohenberg-Kohn}{4}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Ecuaciones de Kohn-Sham}{5}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Aproximación de pseudo-potencial}{6}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Aproximación LDA}{6}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}Teorema de Bloch}{7}{subsubsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.2}El código FIREBALL}{7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Minimización de la energía total}{7}{subsubsection.3.2.1}%
+\contentsline {section}{\numberline {4}Metodología y resultados}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Grafeno 1x1 y distancia carbono-carbono}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Grafeno 18x8}{10}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Estiramiento rígido}{10}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Comparación de métodos de estiramiento}{13}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Estiramiento con dinámica molecular}{14}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Grafeno 18x8 con defectos}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Grafeno 18x8 dopado}{17}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Conclusiones}{19}{section.5}%
+\contentsline {section}{Referencias}{20}{section.5}%

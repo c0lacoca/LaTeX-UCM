@@ -1,0 +1,21 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[1] Config.pm:310> INFO - Logfile is '18-2023-05-12-latex_template_tfg_gf.blg'
+[675] biber-MSWIN64:340> INFO - === 
+[800] Biber.pm:419> INFO - Reading '18-2023-05-12-latex_template_tfg_gf.bcf'
+[1424] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[1531] Biber.pm:4419> INFO - Processing section 0
+[1579] Biber.pm:4610> INFO - Looking for bibtex file 'ADJUNTOS/bib.bib' for section 0
+[1734] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1881] bibtex.pm:1519> INFO - Found BibTeX data source 'ADJUNTOS/bib.bib'
+[2419] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2419] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2419] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'es-ES'
+[2504] bbl.pm:660> INFO - Writing '18-2023-05-12-latex_template_tfg_gf.bbl' with encoding 'UTF-8'
+[2533] bbl.pm:763> INFO - Output to 18-2023-05-12-latex_template_tfg_gf.bbl
+[2535] Biber.pm:131> WARN - legacy month field 'Jun' in entry 'Monkhorst' is not an integer - this will probably not sort properly.
+[2536] Biber.pm:131> WARN - legacy month field 'Jan' in entry 'castro-neto' is not an integer - this will probably not sort properly.
+[2536] Biber.pm:131> WARN - legacy month field 'Nov' in entry 'KS65' is not an integer - this will probably not sort properly.
+[2537] Biber.pm:131> WARN - legacy month field 'Jun' in entry 'Baldereschi' is not an integer - this will probably not sort properly.
+[2537] Biber.pm:131> WARN - legacy month field 'Jun' in entry 'PhysRevB.81.241412' is not an integer - this will probably not sort properly.
+[2537] Biber.pm:131> WARN - legacy month field 'Nov' in entry 'HK64' is not an integer - this will probably not sort properly.
+[2538] Biber.pm:133> INFO - WARNINGS: 6

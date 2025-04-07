@@ -1,0 +1,734 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{HK64}{article}{}
+      \name{author}{2}{}{%
+        {{hash=40ea553b503fe0418f7f07689980cd95}{%
+           family={Hohenberg},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5d41414fe0631332e20a859e66a25627}{%
+           family={Kohn},
+           familyi={K\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{7d5f8c830aae8dc4c996b32459939beb}
+      \strng{fullhash}{7d5f8c830aae8dc4c996b32459939beb}
+      \strng{bibnamehash}{7d5f8c830aae8dc4c996b32459939beb}
+      \strng{authorbibnamehash}{7d5f8c830aae8dc4c996b32459939beb}
+      \strng{authornamehash}{7d5f8c830aae8dc4c996b32459939beb}
+      \strng{authorfullhash}{7d5f8c830aae8dc4c996b32459939beb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{3B}
+      \field{journaltitle}{Phys. Rev.}
+      \field{month}{11}
+      \field{title}{Inhomogeneous Electron Gas}
+      \field{volume}{136}
+      \field{year}{1964}
+      \true{nocite}
+      \field{pages}{B864\bibrangedash B871}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1103/PhysRev.136.B864
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.136.B864
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.136.B864
+      \endverb
+    \endentry
+    \entry{KS65}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5d41414fe0631332e20a859e66a25627}{%
+           family={Kohn},
+           familyi={K\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=408fdc9dce7e09d891fdc02bb87d27d9}{%
+           family={Sham},
+           familyi={S\bibinitperiod},
+           given={L.\bibnamedelimi J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{52da45566c0310e12ed857c5012d1622}
+      \strng{fullhash}{52da45566c0310e12ed857c5012d1622}
+      \strng{bibnamehash}{52da45566c0310e12ed857c5012d1622}
+      \strng{authorbibnamehash}{52da45566c0310e12ed857c5012d1622}
+      \strng{authornamehash}{52da45566c0310e12ed857c5012d1622}
+      \strng{authorfullhash}{52da45566c0310e12ed857c5012d1622}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{4A}
+      \field{journaltitle}{Phys. Rev.}
+      \field{month}{11}
+      \field{title}{Self-Consistent Equations Including Exchange and Correlation Effects}
+      \field{volume}{140}
+      \field{year}{1965}
+      \true{nocite}
+      \field{pages}{A1133\bibrangedash A1138}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1103/PhysRev.140.A1133
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.140.A1133
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.140.A1133
+      \endverb
+    \endentry
+    \entry{Baldereschi}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7886c7087496f8a76afb0b8d1e07014a}{%
+           family={Baldereschi},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{7886c7087496f8a76afb0b8d1e07014a}
+      \strng{fullhash}{7886c7087496f8a76afb0b8d1e07014a}
+      \strng{bibnamehash}{7886c7087496f8a76afb0b8d1e07014a}
+      \strng{authorbibnamehash}{7886c7087496f8a76afb0b8d1e07014a}
+      \strng{authornamehash}{7886c7087496f8a76afb0b8d1e07014a}
+      \strng{authorfullhash}{7886c7087496f8a76afb0b8d1e07014a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{12}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{6}
+      \field{title}{Mean-Value Point in the Brillouin Zone}
+      \field{volume}{7}
+      \field{year}{1973}
+      \field{pages}{5212\bibrangedash 5215}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.7.5212
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.7.5212
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.7.5212
+      \endverb
+    \endentry
+    \entry{Monkhorst}{article}{}
+      \name{author}{2}{}{%
+        {{hash=eb66e89bd102cea4ddd0988d9778013b}{%
+           family={Monkhorst},
+           familyi={M\bibinitperiod},
+           given={Hendrik\bibnamedelima J.},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7ab9ff66d22b5bc4fc645fb63bf91fae}{%
+           family={Pack},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{0eeac6c36619368bc036c3791c55e8e3}
+      \strng{fullhash}{0eeac6c36619368bc036c3791c55e8e3}
+      \strng{bibnamehash}{0eeac6c36619368bc036c3791c55e8e3}
+      \strng{authorbibnamehash}{0eeac6c36619368bc036c3791c55e8e3}
+      \strng{authornamehash}{0eeac6c36619368bc036c3791c55e8e3}
+      \strng{authorfullhash}{0eeac6c36619368bc036c3791c55e8e3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{12}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{6}
+      \field{title}{Special points for Brillouin-zone integrations}
+      \field{volume}{13}
+      \field{year}{1976}
+      \field{pages}{5188\bibrangedash 5192}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.13.5188
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.13.5188
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.13.5188
+      \endverb
+    \endentry
+    \entry{BOEHM1986241}{article}{}
+      \name{author}{3}{}{%
+        {{hash=987f214a4ee7baef2e7b7338be55f0cd}{%
+           family={Boehm},
+           familyi={B\bibinitperiod},
+           given={H.P.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d31264d14ace0cfa759ef3450ba5ab85}{%
+           family={Setton},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=421744670bc5080c3828f0eeb6b2e481}{%
+           family={Stumpp},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec318ace13fa7e4f56d9d409f2433cf0}
+      \strng{fullhash}{c0dd7c9da2117196c8668d9bce693fc4}
+      \strng{bibnamehash}{c0dd7c9da2117196c8668d9bce693fc4}
+      \strng{authorbibnamehash}{c0dd7c9da2117196c8668d9bce693fc4}
+      \strng{authornamehash}{ec318ace13fa7e4f56d9d409f2433cf0}
+      \strng{authorfullhash}{c0dd7c9da2117196c8668d9bce693fc4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0008-6223}
+      \field{journaltitle}{Carbon}
+      \field{number}{2}
+      \field{title}{Nomenclature and terminology of graphite intercalation compounds}
+      \field{volume}{24}
+      \field{year}{1986}
+      \field{pages}{241\bibrangedash 245}
+      \range{pages}{5}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0008-6223(86)90126-0
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0008622386901260
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0008622386901260
+      \endverb
+    \endentry
+    \entry{science2004}{article}{}
+      \name{author}{8}{}{%
+        {{hash=edc496cb40fecf35de2f2957fb7a20ac}{%
+           family={Novoselov},
+           familyi={N\bibinitperiod},
+           given={K.\bibnamedelimi S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=40f0ba5816a970378fff1e96ae8538f7}{%
+           family={Geim},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=3ac1b6c954b4c96d13707e49d10d1604}{%
+           family={Morozov},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=1dee54224972293ef194ca10a2a6551e}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1f26f664835ac6c347db22001b657f1a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f788111879d4dc3a8f9da1b5ad19c531}{%
+           family={Dubonos},
+           familyi={D\bibinitperiod},
+           given={S.\bibnamedelimi V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=95e5b1f7631e44941e31f4157a125fe8}{%
+           family={Grigorieva},
+           familyi={G\bibinitperiod},
+           given={I.\bibnamedelimi V.},
+           giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=ae41d4ab1c9dd572a0bf8b4356c95b90}{%
+           family={Firsov},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{fca77cb58b7f342711c9d7fa90d2e237}
+      \strng{fullhash}{31f0a68b2188545d07423b13d2c1fb34}
+      \strng{bibnamehash}{31f0a68b2188545d07423b13d2c1fb34}
+      \strng{authorbibnamehash}{31f0a68b2188545d07423b13d2c1fb34}
+      \strng{authornamehash}{fca77cb58b7f342711c9d7fa90d2e237}
+      \strng{authorfullhash}{31f0a68b2188545d07423b13d2c1fb34}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe monocrystalline graphitic films, which are a few atoms thick but are nonetheless stable under ambient conditions, metallic, and of remarkably high quality. The films are found to be a two-dimensional semimetal with a tiny overlap between valence and conductance bands, and they exhibit a strong ambipolar electric field effect such that electrons and holes in concentrations up to 1013 per square centimeter and with room-temperature mobilities of ∼10,000 square centimeters per volt-second can be induced by applying gate voltage.}
+      \field{journaltitle}{Science}
+      \field{number}{5696}
+      \field{title}{Electric Field Effect in Atomically Thin Carbon Films}
+      \field{volume}{306}
+      \field{year}{2004}
+      \field{pages}{666\bibrangedash 669}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1102896
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/science.1102896
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/science.1102896
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/science.1102896
+      \endverb
+    \endentry
+    \entry{RISE}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6e60a48c396d8e4c60327b798ee6b025}{%
+           family={Geim},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=edc496cb40fecf35de2f2957fb7a20ac}{%
+           family={Novoselov},
+           familyi={N\bibinitperiod},
+           given={K.S.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a5b65db2d4eedc8d48379beaa08d403}
+      \strng{fullhash}{3a5b65db2d4eedc8d48379beaa08d403}
+      \strng{bibnamehash}{3a5b65db2d4eedc8d48379beaa08d403}
+      \strng{authorbibnamehash}{3a5b65db2d4eedc8d48379beaa08d403}
+      \strng{authornamehash}{3a5b65db2d4eedc8d48379beaa08d403}
+      \strng{authorfullhash}{3a5b65db2d4eedc8d48379beaa08d403}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature materials}
+      \field{month}{04}
+      \field{title}{The Rise of Graphene}
+      \field{volume}{6}
+      \field{year}{2007}
+      \true{nocite}
+      \field{pages}{183\bibrangedash 91}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1038/nmat1849
+      \endverb
+    \endentry
+    \entry{science}{article}{}
+      \name{author}{4}{}{%
+        {{hash=89ae87af099fc4c5d1b90b32af948c6f}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Changgu},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b406019ae63e681fad5ac6bc6a6fd88c}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Xiaoding},
+           giveni={X\bibinitperiod}}}%
+        {{hash=fb9587c5ad4b5401ad393bea7176600c}{%
+           family={Kysar},
+           familyi={K\bibinitperiod},
+           given={Jeffrey\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=00c1651925040335862417178201693b}{%
+           family={Hone},
+           familyi={H\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e33fbc2d455d340b683ef97a3a06ef5}
+      \strng{fullhash}{054a4ec2f2962b0d58cd2d26b245d68f}
+      \strng{bibnamehash}{054a4ec2f2962b0d58cd2d26b245d68f}
+      \strng{authorbibnamehash}{054a4ec2f2962b0d58cd2d26b245d68f}
+      \strng{authornamehash}{2e33fbc2d455d340b683ef97a3a06ef5}
+      \strng{authorfullhash}{054a4ec2f2962b0d58cd2d26b245d68f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5887}
+      \field{title}{Measurement of the Elastic Properties and Intrinsic Strength of Monolayer Graphene}
+      \field{volume}{321}
+      \field{year}{2008}
+      \field{pages}{385\bibrangedash 388}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1157996
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/science.1157996
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/science.1157996
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/science.1157996
+      \endverb
+    \endentry
+    \entry{castro-neto}{article}{}
+      \name{author}{5}{}{%
+        {{hash=5a3c897cd4a817185b28c2d0568650e0}{%
+           family={Castro\bibnamedelima Neto},
+           familyi={C\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={A.\bibnamedelimi H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ea8e80650660b8ec2dbbd2a13a7a26a1}{%
+           family={Guinea},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b693a4f7089de1a237046d913df71c32}{%
+           family={Peres},
+           familyi={P\bibinitperiod},
+           given={N.\bibnamedelimi M.\bibnamedelimi R.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=edc496cb40fecf35de2f2957fb7a20ac}{%
+           family={Novoselov},
+           familyi={N\bibinitperiod},
+           given={K.\bibnamedelimi S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=40f0ba5816a970378fff1e96ae8538f7}{%
+           family={Geim},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{fdf3693e7d564616070379cd190f6725}
+      \strng{fullhash}{75d5d846c2685bf9ad1048da3628409d}
+      \strng{bibnamehash}{75d5d846c2685bf9ad1048da3628409d}
+      \strng{authorbibnamehash}{75d5d846c2685bf9ad1048da3628409d}
+      \strng{authornamehash}{fdf3693e7d564616070379cd190f6725}
+      \strng{authorfullhash}{75d5d846c2685bf9ad1048da3628409d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1}
+      \field{journaltitle}{Rev. Mod. Phys.}
+      \field{month}{1}
+      \field{title}{The electronic properties of graphene}
+      \field{volume}{81}
+      \field{year}{2009}
+      \field{pages}{109\bibrangedash 162}
+      \range{pages}{54}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.81.109
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.81.109
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.81.109
+      \endverb
+    \endentry
+    \entry{sholl}{inbook}{}
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Ltd}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Density Functional Theory}
+      \field{chapter}{1}
+      \field{isbn}{9780470447710}
+      \field{title}{What is Density Functional Theory?}
+      \field{year}{2009}
+      \field{pages}{1\bibrangedash 33}
+      \range{pages}{33}
+      \verb{doi}
+      \verb https://doi.org/10.1002/9780470447710.ch1
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470447710.ch1
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470447710.ch1
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470447710.ch1
+      \endverb
+    \endentry
+    \entry{PhysRevB.81.241412}{article}{}
+      \name{author}{3}{}{%
+        {{hash=257fe18a11ef9675d903dbbcccc3a13b}{%
+           family={Cocco},
+           familyi={C\bibinitperiod},
+           given={Giulio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ac7a8e38578742c84488f85ccfc30df7}{%
+           family={Cadelano},
+           familyi={C\bibinitperiod},
+           given={Emiliano},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1f1577d1c435291738552646eb1411c1}{%
+           family={Colombo},
+           familyi={C\bibinitperiod},
+           given={Luciano},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{ea73b14adb8e318c9d88ced2129465de}
+      \strng{fullhash}{a20849b25c28dbd0643c6d7cfe898925}
+      \strng{bibnamehash}{a20849b25c28dbd0643c6d7cfe898925}
+      \strng{authorbibnamehash}{a20849b25c28dbd0643c6d7cfe898925}
+      \strng{authornamehash}{ea73b14adb8e318c9d88ced2129465de}
+      \strng{authorfullhash}{a20849b25c28dbd0643c6d7cfe898925}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{24}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{6}
+      \field{title}{Gap opening in graphene by shear strain}
+      \field{volume}{81}
+      \field{year}{2010}
+      \field{pages}{241412}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.81.241412
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.81.241412
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.81.241412
+      \endverb
+    \endentry
+    \entry{https://doi.org/10.1002/pssb.201147259}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=c33430fbcdd6f9f6f97c0a82afcf7f62}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={James\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{43247ef1e248858ded80296df4d997d4}
+      \strng{fullhash}{43247ef1e248858ded80296df4d997d4}
+      \strng{bibnamehash}{43247ef1e248858ded80296df4d997d4}
+      \strng{authorbibnamehash}{43247ef1e248858ded80296df4d997d4}
+      \strng{authornamehash}{43247ef1e248858ded80296df4d997d4}
+      \strng{authorfullhash}{43247ef1e248858ded80296df4d997d4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{physica status solidi (b)}
+      \field{number}{9}
+      \field{title}{Advances and applications in the FIREBALL ab initio tight-binding molecular-dynamics formalism}
+      \field{volume}{248}
+      \field{year}{2011}
+      \true{nocite}
+      \field{pages}{1989\bibrangedash 2007}
+      \range{pages}{19}
+      \verb{doi}
+      \verb https://doi.org/10.1002/pssb.201147259
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssb.201147259
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/pssb.201147259
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/pssb.201147259
+      \endverb
+      \keyw{ab initio molecular-dynamics}
+    \endentry
+    \entry{elastic}{article}{}
+      \name{author}{4}{}{%
+        {{hash=32da9ed9aad9b0fd3adf682fd828611d}{%
+           family={Kalosakas},
+           familyi={K\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0064968747cd9b1ff7b24d6bdd08d65c}{%
+           family={Lathiotakis},
+           familyi={L\bibinitperiod},
+           given={Nektarios},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b691ed1188345b573fad9878ac33c84c}{%
+           family={Galiotis},
+           familyi={G\bibinitperiod},
+           given={Costas},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c29b285cae1ed72f13bf30ab0d8e11b9}{%
+           family={Papagelis},
+           familyi={P\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{35fcf3aa001e4ec2a89c2f90a20cc454}
+      \strng{fullhash}{86b8de172f4f07a0caa5253879788c1e}
+      \strng{bibnamehash}{86b8de172f4f07a0caa5253879788c1e}
+      \strng{authorbibnamehash}{86b8de172f4f07a0caa5253879788c1e}
+      \strng{authornamehash}{35fcf3aa001e4ec2a89c2f90a20cc454}
+      \strng{authorfullhash}{86b8de172f4f07a0caa5253879788c1e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Physics}
+      \field{month}{04}
+      \field{title}{In-plane force fields and elastic properties of graphene}
+      \field{volume}{113}
+      \field{year}{2013}
+      \field{pages}{134307}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/1.4798384
+      \endverb
+    \endentry
+    \entry{MEMARIAN2015348}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2b04c1bc1af277f6465c05a6117ee5d2}{%
+           family={Memarian},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e0820edcee2f3a40f8b4e1a0509120ee}{%
+           family={Fereidoon},
+           familyi={F\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=666a93356e80de1f30d26457763a44fc}{%
+           family={{Darvish Ganji}},
+           familyi={D\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{66848e42a2f8a5d5c16a64d9f1620f22}
+      \strng{fullhash}{53601af14fd85bc852d7bcc6b6570dcf}
+      \strng{bibnamehash}{53601af14fd85bc852d7bcc6b6570dcf}
+      \strng{authorbibnamehash}{53601af14fd85bc852d7bcc6b6570dcf}
+      \strng{authornamehash}{66848e42a2f8a5d5c16a64d9f1620f22}
+      \strng{authorfullhash}{53601af14fd85bc852d7bcc6b6570dcf}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Despite of the numerous theoretical and experimental investigations on the mechanical properties of graphene as a unique nano-structured material, a precious value for this important property has not yet been presented. In the present work, the Young’s modulus of single layer graphene sheet has been investigated by using comprehensive classic as well as quantum mechanics (QM) calculations. Molecular mechanics (MM) approach with various well-defined force-fields such as AIREBO, Tresoff and EDIP potentials have been considered. In QM category, several conventional methods (DFTB and DFT-LDA/GGA) have been employed. The results show that EDIP potential method predicts more accurately the graphene Young’s modulus value compared to experimental results. Furthermore, despite the various theoretical results reported elsewhere, the EDIP potential calculations result reveals that Young’s modulus has the same value at both zigzag and armchair directions. From the results obtained here, we found that among the various MM and QM methods considered here the EDIP method seems to be the most convenient method for evaluation of both structural geometries and mechanical properties of carbon based graphene-like materials. This is because of its less computational costs accompanied with reliable results comparable with the experiments.}
+      \field{issn}{0749-6036}
+      \field{journaltitle}{Superlattices and Microstructures}
+      \field{title}{Graphene Young’s modulus: Molecular mechanics and DFT treatments}
+      \field{volume}{85}
+      \field{year}{2015}
+      \field{pages}{348\bibrangedash 356}
+      \range{pages}{9}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.spmi.2015.06.001
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0749603615300239
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0749603615300239
+      \endverb
+      \keyw{Computer modeling and simulations,Nanostructure,calculations,Molecular dynamics,Elastic properties}
+    \endentry
+    \entry{LOPEZPOLIN201742}{article}{}
+      \name{author}{6}{}{%
+        {{hash=58326184775b089bf897afb96b5d366d}{%
+           family={López-Polín},
+           familyi={L\bibinithyphendelim P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=689875b7149deb8f6e20d79d827368df}{%
+           family={Jaafar},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ea8e80650660b8ec2dbbd2a13a7a26a1}{%
+           family={Guinea},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d885e9e751a912c00a1bea82f9b2a507}{%
+           family={Roldán},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2abf9cad8d707afa7d5433ffda073ca8}{%
+           family={Gómez-Navarro},
+           familyi={G\bibinithyphendelim N\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=07c675c8d1d83269a1fe7ff01a7e9962}{%
+           family={Gómez-Herrero},
+           familyi={G\bibinithyphendelim H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{77df3b75795eb5aaab854a384a45dd4e}
+      \strng{fullhash}{22e78f7feb2ef086d41311d0fed0423c}
+      \strng{bibnamehash}{22e78f7feb2ef086d41311d0fed0423c}
+      \strng{authorbibnamehash}{22e78f7feb2ef086d41311d0fed0423c}
+      \strng{authornamehash}{77df3b75795eb5aaab854a384a45dd4e}
+      \strng{authorfullhash}{22e78f7feb2ef086d41311d0fed0423c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0008-6223}
+      \field{journaltitle}{Carbon}
+      \field{title}{The influence of strain on the elastic constants of graphene}
+      \field{volume}{124}
+      \field{year}{2017}
+      \field{pages}{42\bibrangedash 48}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.carbon.2017.08.023
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0008622317308096
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0008622317308096
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
