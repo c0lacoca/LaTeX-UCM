@@ -15,4 +15,4 @@ Proyectos de LaTeX de universidad del grado de física de la UCM y otros. Este r
   * Formularios y ejercicios de asignaturas de matemáticas, física y química de cursos de ESO, 1º y 2º de bachillerato.
   * Corrección de examen de EvAU (Madrid) de Matemáticas II del curso 2022-2023 (`Corrección_EvAU23.pdf`).
 * **Proyectos misceláneos.**
-  * Proyecto sin acabar: Ejercicio de Twitter de mecánica clásica.
+  * Proyecto sin acabar: Ejercicio de Twitter (X) de mecánica clásica.
