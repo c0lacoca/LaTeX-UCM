@@ -1,0 +1,99 @@
+\fancyhead[L]{\emph{EJERCICIOS DEL TEMA 2}}
+
+\chapter*{Ejercicios de tema 2}
+\addcontentsline{toc}{chapter}{Tema 2}
+\large
+
+\begin{enumerate}
+    \item[$\boxed{1}$] Sea $S$ la superficie parametrizada $\mathbf{x}(u,v)=(u\cos v,u\sin v,u^2)$, ($0<u,\ 0<v<2\pi )$, y sean $C_1$ y $C_2$ las curvas sobre $S$ dadas por $(u(t),v(t))=(t,t+1)$ y $(u(t),v(t))=(t,3-t)$, respectivamente. Calcule el ángulo que forman dichas curvas en el punto $P$ en que se cortan sobre $S$:
+    \begin{enumerate}
+        \item Encontrando parametrizaciones de las curvas en $\mathbb{R}^3$
+        \item Operando en la base coordenada del plano $T_p(S)$ tangente a $S$ en el punto $P$.
+    \end{enumerate}
+\end{enumerate}
+\noindent\rule{\textwidth}{0.5pt}
+
+En primer lugar, podemos ver que la supreficie determina un paraboloide de revolución: $x(u,v)^2+y(u,v)^2=u^2=z(u,v)$. Las curvas $C_1,C_2$ dentro de este paraboloide se cortan en el punto de intersección, que cumple que:
+\begin{gather*}
+    C_1\cap C_2\left \{ 
+    \begin{array}{cc}
+        C_1:&(u,v)=(t,t+1)\\ 
+        C_2:&(u,v)=(t^*,3-t^*)  
+    \end{array}
+    \right .\implies \begin{array}{c}
+         t=t^*  \\
+         1+t=3-t^* 
+    \end{array}\\
+    \implies t=t^*=1\iff \boxed{P(1,2)}
+\end{gather*}
+Las curvas tienen por ecuación:
+\begin{itemize}
+\item $
+\mathbf{x}(\sigma_1(t))=(t\cos(1+t),t\sin(1+t),t^2)
+$\\
+$
+\hookrightarrow \mathbf{x'}(\sigma_1(t))=(\cos(1+t)-t\sin(1+t),\sin(1+t)+t\cos(1+t),2t)
+$\\
+$
+\hookrightarrow \mathbf{x'}(\sigma_1(1))=(\cos(2)-\sin(2),\sin(2)+\cos(2),2)
+$
+\item $
+\mathbf{x}(\sigma_2(t))=(t\cos(3-t),t\sin(3-t),t^2)
+$\\
+$
+\hookrightarrow \mathbf{x'}(\sigma_2(t))=(\cos(3-t)+t\sin(3-t),\sin(3-t)-t\cos(3-t),2t)
+$\\
+$
+\hookrightarrow \mathbf{x'}(\sigma_2(1))=(\cos(2)+\sin(2),\sin(2)-\cos(2),2)
+$
+\end{itemize}
+El coseno del ángulo formado entre las dos curvas se calcula como el del ángulo de los vectores velocidad de las curvas:
+$$
+\cos \theta=\frac{\mathbf{x'}(\sigma_1(1))\cdot \mathbf{x'}(\sigma_2(1))}{||\mathbf{x'}(\sigma_1(1))||\cdot ||\mathbf{x'}(\sigma_2(1))||}
+$$
+Calculando los módulos y el producto escalar, se llega a que:\\
+$
+\mathbf{x'}(\sigma_1(1))\cdot \mathbf{x'}(\sigma_2(1))=4,\ ||\mathbf{x'}(\sigma_1(1))||^2= ||\mathbf{x'}(\sigma_2(1))||^2=6
+$
+y finalmente:
+$$
+\cos \theta =\frac{4}{\sqrt{6}\sqrt{6}}=\frac{2}{3}\implies \boxed{\theta=\arccos\frac{2}{3}=48.2^\circ }
+$$
+\noindent\rule{\textwidth}{0.3pt}
+
+Para calcular el ángulo con el plano $T_p(S)$, primero necesitaremos la base coordenada $\{ \mathbf{x}_\alpha  \}\equiv \{ \mathbf{x}_u,\mathbf{x}_v \}$.
+$$
+\mathbf{x}_u=\pdv{\mathbf{x}}{u}=(\cos v,\sin v,2u) \ , \ \mathbf{x}_v=\pdv{\mathbf{x}}{v}=(-u\sin v,u\cos v,0)
+$$
+En el punto $P(1,2)$, el plano tangente viene definido por $\mathbf{x}_u(1,2)=(\cos 2,\sin 2, 2)$, $\mathbf{x}_v(1,2)=(-\sin 2,\cos 2,0)$. La primera forma fundamental:
+$$
+g_{\mu \nu }=\left ( 
+\begin{array}{cc}
+     1+4u^2&0  \\
+     0&u^2 
+\end{array}
+\right )\longrightarrow g_{\mu \nu }(1,2)=\left ( 
+\begin{array}{cc}
+     5&0  \\
+     0&1 
+\end{array} \right )
+$$
+El ángulo formado por dos vectores del plano $T_p(S), \mathbf{v},\mathbf{w}$, se calcula como:
+$$
+\cos \theta =\frac{g_{\alpha \beta }v^\alpha w^\beta }{\sqrt{g_{\mu \nu }v^\mu v^\nu }\sqrt{g_{\rho \sigma }w^\rho w^\sigma }}
+$$
+con las coordenadas de $\mathbf{v}$ y $\mathbf{w}$ en la base de $T_p(S)$. En esta base, estas coordenadas son: $(v^\alpha )=(1,1),\ (w^\alpha )=(1,-1)$.
+$$
+\cos \theta =\frac{5\cdot 1\cdot 1+1\cdot 1\cdot (-1)}{\sqrt{5\cdot 1\cdot 1+1\cdot 1\cdot 1}\sqrt{5\cdot 1\cdot 1+1\cdot (-1)\cdot (-1)}}=\frac{4}{6}=\frac{2}{3}
+$$
+Es decir, $\theta=48.2^\circ $.
+
+\noindent\rule{\textwidth}{1pt}
+\begin{enumerate}
+    \item[$\boxed{3}$] 
+    \begin{enumerate}
+        \item Calcule la primera forma fundamental de la superficie parametrizada $\mathbf{x}(u^1,u^2)=(u^1+u^2,u^1-u^2,u^1u^2)$.
+        \item Utilizando la regla tensorial, calcule la primera forma fundamental al efectuar la reparametrización $u^1=(\Bar{u}^1+\Bar{u}^2)/2,\ u^2=(\Bar{u}^1-\Bar{u}^2)/2$.
+        \item Compruebe el resultado calculando $\mathbf{\Bar{x}}(\Bar{u}^1,\Bar{u}^2)$ y obteniendo la primera forma fundamental de esta reparametrización.
+    \end{enumerate}
+\end{enumerate}

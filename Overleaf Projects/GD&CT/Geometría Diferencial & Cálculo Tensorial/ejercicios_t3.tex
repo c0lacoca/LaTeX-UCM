@@ -1,0 +1,26 @@
+\fancyhead[L]{\emph{EJERCICIOS DEL TEMA 3}}
+
+\chapter*{Ejercicios de tema 3}
+\addcontentsline{toc}{chapter}{Tema 3}
+\large
+
+\begin{enumerate}
+    \item[\fbox{6}]  A partir del tensor de Riemann $R^\mu {}_{\nu \lambda \sigma }$ se definen el tensor de Ricci: $R_{\nu \sigma }=R^\mu {}_{\nu \mu \sigma }$ y la curvatura escalar $R=R^{\mu}{}_\mu $. Sabiendo que en dimensión 2 (es decir, para una superficie) el tensor de Riemann se puede escribir como: $R_{\kappa \nu \lambda \sigma }=K(g_{\kappa \lambda }g_{\nu \sigma }-g_{\kappa \sigma }g_{\nu \lambda })$, donde $K$ es la curvatura gaussiana, calcule:
+    \begin{enumerate}
+        \item La forma del tensor de Ricci de una superficie
+        \item La curvatura escalar de una superficie
+        \item $R_{\kappa \nu \lambda \sigma }\epsilon ^{\kappa \nu }\epsilon^{\lambda \sigma }$, donde $\epsilon^{\alpha \beta }$ es el tensor de Levi-Civita.
+    \end{enumerate}
+\end{enumerate}
+\noindent\rule{\textwidth}{0.5pt}
+
+(a) Tensor de Ricci de una superficie:
+\begin{equation*}
+    \begin{split}
+        R_{\nu \sigma}=R^\mu {}_{\nu \mu \sigma }&=g^{\mu \kappa }R_{\kappa \nu \mu \sigma }=g^{\mu \kappa }K (g_{\kappa \lambda }g_{\nu \sigma }-g_{\kappa \sigma }g_{\nu \lambda })\\
+        &=K [ g^{\mu \kappa }g_{\kappa \lambda }g_{\nu \sigma }-g^{\mu \kappa }g_{\kappa \sigma }g_{\nu \lambda } ]\\
+        &=K [ \delta ^\mu {}_\mu g_{\nu \sigma }-\delta ^\mu {}_\sigma g_{\nu \lambda } ]\\
+        &=K[ 2g_{\nu \sigma }-g_{\mu \sigma } ]\\
+        &=\boxed{Kg_{\mu \sigma }}
+    \end{split}
+\end{equation*}

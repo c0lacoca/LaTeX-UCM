@@ -1,0 +1,96 @@
+\documentclass{report}
+\usepackage{arev}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, left=2.5cm, right= 2.5cm, top=2.5cm, bottom= 2.5cm]{geometry} %cambiar los márgenes
+\usepackage{amsmath, amssymb, cancel, extarrows, amsthm }%símbolos matemáticos
+\usepackage{wasysym}  %la carita triste
+\usepackage{derivative}
+\usepackage{physics}
+\usepackage{graphicx, wrapfig}% Include figure files
+\usepackage{subfig}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage{units}
+\usepackage[spanish, es-tabla]{babel} %traducción al español
+\usepackage{fancyhdr, ragged2e}
+\setlength{\headheight}{13.07002pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{float}
+\usepackage[symbol]{footmisc}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{xcolor, colortbl}
+\usepackage{pagecolor}
+\usepackage{tcolorbox}
+\renewcommand{\thempfootnote}{\fnsymbol{mpfootnote}}
+\newtcolorbox{mybox}{colback=gray!5!white,colframe=black!75!black}
+\definecolor{cadetblue4}{rgb}{.33,.53,.55}
+\definecolor{azulcrepuscular}{rgb}{.49,.62,.75}
+\definecolor {atomictangerine} {rgb} {1.0, 0.6, 0.4}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Apuntes de Geometría Diferencial \& Cálculo Tensorial},
+    pdfpagemode=FullScreen,
+    }
+
+\renewcommand\familydefault{\sfdefault}
+\addto\captionsspanish{
+  \renewcommand{\contentsname}%
+    {Índice de contenidos}%
+}
+
+\begin{document}
+\input{portada.tex}
+\restorepagecolor
+
+\pagestyle{fancy}
+\fancyhead[R]{}
+\fancyfoot[L]{Manuel Lozano B.}
+\fancyfoot[R]{GD$\&$CT}
+
+\section*{Agradecimientos}
+
+A Marcos, por revisar los apuntes, limpiarlos de erratas y por obligarme a mantener frescos mis conocimientos de la  asignatura. 
+
+\tableofcontents
+
+\part{Teoría}
+
+\input{cap_1.tex}
+
+\input{cap_2}
+
+\input{cap_3.tex}
+
+
+
+\input{cap_4.tex}
+
+\clearpage
+
+
+\part{Ejercicios sin corregir}
+
+\section*{Aviso legal:}
+
+\input{MENSAJITO}
+
+
+
+\input{ejercicios_t1}
+
+
+
+\input{ejercicios_t2}
+
+\input{ejercicios_t3}
+
+\end{document}
